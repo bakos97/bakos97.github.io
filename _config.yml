@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: [The title of your site]
-description: [A short description of your site's purpose]
+title: Assignment 2
+description: How has the pandemic effected crimes in SF
 
 # title: Assignment 2
 # email: s222681@dtu.dk
