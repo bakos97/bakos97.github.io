@@ -2,7 +2,9 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Crime in the Time of COVID-19: How the Pandemic Changed San Francisco's Criminal Landscape
+
+## An Analysis of How COVID-19 Has Impacted Crime Rates in San Francisco
 
 [Link to another page](./another-page.html).
 
@@ -10,7 +12,7 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
