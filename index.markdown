@@ -27,7 +27,18 @@ But what about vandalism in San Francisco's different districts? We made a map t
 <iframe src="https://bakos97.github.io/vandalism_map_dual.html" width="100%" height="500"></iframe>
 As you can see, there were increases in vandalism incidents in almost all districts during the pandemic. The central district saw the most significant increase, going from 23 incidents to 42 incidents. The northern district also had a significant increase, going from 28 incidents to 53 incidents. Richmond district saw a increase in vandalism incidents, going from 7 incidents to 16 incidents.
 
+As we delved deeper into our analysis of San Francisco's crime patterns during the pandemic, we noticed a significant increase in vandalism. This increase in vandalism was perplexing to us, and we wanted to learn more about the phenomenon. We stumbled upon an article in the San Francisco Chronicle from April 2020, which shed some light on the issue.
 
+The article reported that break-ins and instances of vandalism at restaurants were becoming increasingly common during the pandemic, as the Bay Area sheltered in place. While burglary rates were down by single digits in San Francisco compared to the same period the previous year, the combination of less-guarded businesses and unusually empty streets had created conditions for desperate people or opportunists to burglarize restaurants.
+
+Mark Bechelli, the owner of Bechelli's Flower Market Cafe, discovered a busted window at his San Francisco restaurant about a week after the shelter-in-place order went into effect. Security footage revealed that a man had squeezed into the restaurant, swiped some liquor and quickly got out. Given the back-to-back break-ins, Bechelli reinforced the window with wood beams and hasn’t had a problem since. Both burglars stole liquor, leaving the back of the bar empty. Bechelli estimates losing $3,000 between the window and alcohol.
+
+Similarly, Little Skillet, a San Francisco soul food spot, had long relied on takeout and remained open throughout the shelter-in-place order. On Saturday, owner Deanna Sison arrived to find the locks broken and valuables such as iPads, speakers, and cash gone.
+
+As time went on, people became more and more desperate and took bigger and bigger risks, said Jay Foster, the former partner of Sison. He thought that restaurants that were still operating were bigger targets during the shutdown because they’re more likely to have cash and inventory.
+
+This article confirms our finding that vandalism has increased during the pandemic in San Francisco, and offers insight into the reasons why. It also highlights the struggles of local businesses during this challenging time. We believe that by understanding the impact of the pandemic on crime in San Francisco, we can help support the community in moving forward. For more information, you can read the full article here:[Link to article](https://www.sfchronicle.com/food/article/Break-ins-vandalism-strike-Bay-Area-restaurants-15188428.php).
+ 
 
 
 
