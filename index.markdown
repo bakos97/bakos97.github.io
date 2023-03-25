@@ -8,8 +8,10 @@ layout: default
 
 San Francisco is known for its vibrant culture, picturesque landscapes, and thriving economy. However, like any major city, San Francisco has also experienced its share of crime over the years. In recent times, the COVID-19 pandemic has had a significant impact on the city, affecting everything from public health to the local economy. But how has the pandemic impacted crime in San Francisco? To answer this question, we turned to the SF Crime Data, a comprehensive dataset that tracks crime patterns in the city over time. In this story, we explore the insights we gained from analyzing the data, focusing on the ways in which the pandemic has affected crime in San Francisco. From changes in overall crime trends to shifts in the types of crimes being committed, we uncover the impact of the pandemic on public safety in the city. Join us as we explore the fascinating world of crime in San Francisco during the pandemic.
 
-![My Graph](percentage_crime.png)
-
+<figure>
+  <img src="percentage_crime.png">
+  <figcaption>This bar chart shows the incident categories with the greatest change in average count during the pandemic in San Francisco. The categories are ranked by percentage change, with the largest positive and negative changes at the top and bottom, respectively. The incident category "Civil Sidewalks" had the greatest negative change, with an average count decrease of 92.42% during the pandemic compared to the 2018-2019 period. The incident category "Vandalism" had the greatest positive change, with an average count increase of 66.67% during the pandemic compared to the 2018-2019 period.</figcaption>
+</figure>
 
 [Link to another page](./another-page.html).
 
