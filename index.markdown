@@ -2,23 +2,32 @@
 layout: default
 ---
 
-# Crime in the Time of COVID-19: How the Pandemic Changed San Francisco's Criminal Landscape
+# COVID-19's Impact on San Francisco's Crime Rates: A Comprehensive Analysis
 
-## An Analysis of How COVID-19 Has Impacted Crime Rates in San Francisco
+## How the Pandemic Affected Crime Patterns in San Francisco from 2018-2021
 
-San Francisco is known for its vibrant culture, picturesque landscapes, and thriving economy. However, like any major city, San Francisco has also experienced its share of crime over the years. In recent times, the COVID-19 pandemic has had a significant impact on the city, affecting everything from public health to the local economy. But how has the pandemic impacted crime in San Francisco? To answer this question, we turned to the SF Crime Data, a comprehensive dataset that tracks crime patterns in the city over time. In this story, we explore the insights we gained from analyzing the data, focusing on the ways in which the pandemic has affected crime in San Francisco. From changes in overall crime trends to shifts in the types of crimes being committed, we uncover the impact of the pandemic on public safety in the city. Join us as we explore the fascinating world of crime in San Francisco during the pandemic.
+San Francisco, the city by the bay, is known for its vibrant culture, picturesque landscapes, and booming economy. However, like any major city, it has its fair share of crime. With the arrival of COVID-19, the pandemic has had a significant impact on the city, disrupting the status quo in almost every aspect of daily life. In this piece, we explore the fascinating world of crime in San Francisco during the pandemic and its effects on public safety in the city.
 
-Our analysis of the data reveals that San Francisco saw an average of over 133,262 incidents reported annually during the pandemic period of 2020-2021, which is significantly higher than the two preceding years. San Francisco saw an average of roughly 148,250 reported incidents per year from 2018-2019. However, during the pandemic period, San Francisco saw an average of roughly 118,273 reported incidents per year, which represents a decrease of nearly -20.22% from the two preceding years.
+According to our analysis of the SF Crime Data, San Francisco witnessed over 133,262 reported incidents annually on average. Between 2018 and 2019, the city saw around 148,250 reported incidents per year, but this number dropped to around 118,273 in 2020 and 2021, representing a significant decline of nearly 20.22%.
 
-In this story, we explore the insights we gained from analyzing the data, focusing on the ways in which the pandemic has affected crime in San Francisco. From changes in overall crime trends to shifts in the types of crimes being committed, we uncover the impact of the pandemic on public safety in the city. Join us as we explore the fascinating world of crime in San Francisco during the pandemic.
-
-This bar chart shows the incident categories with the greatest change in average count during the pandemic in San Francisco. The categories are ranked by percentage change, with the largest positive and negative changes at the top and bottom, respectively. The incident category "Civil Sidewalks" had the greatest negative change, with an average count decrease of 92.42% during the pandemic compared to the 2018-2019 period. The incident category "Vandalism" had the greatest positive change, with an average count increase of 66.67% during the pandemic compared to the 2018-2019 period.
-
+Delving deeper into the data, we find that the pandemic has had an unequal impact on different categories of crime. Some types of crime decreased significantly, while others stubbornly remained high or even increased. The bar chart below illustrates the categories that saw the greatest changes in average count during the pandemic."
 
 <figure>
   <img src="percentage_crime.png">
   <figcaption>This bar chart shows the incident categories with the greatest change in average count during the pandemic in San Francisco. The categories are ranked by percentage change, with the largest positive and negative changes at the top and bottom, respectively. The incident category "Civil Sidewalks" had the greatest negative change, with an average count decrease of 92.42% during the pandemic compared to the 2018-2019 period. The incident category "Vandalism" had the greatest positive change, with an average count increase of 66.67% during the pandemic compared to the 2018-2019 period.</figcaption>
 </figure>
+
+Vandalism saw a massive increase of 66.67% during the pandemic, possibly due to the closure of public spaces and businesses, which may have left them more vulnerable to property damage. Burglary and motor vehicle theft also witnessed notable increases of over 40%.
+
+In contrast, the pandemic had a significant positive impact on civil sidewalks, which witnessed a dramatic decrease of 92.42%. Meanwhile, prostitution, liquor laws, and gambling all witnessed a decrease of over 60%.
+
+COVID-19 has upended life in San Francisco, and its impact on crime rates in the city is no exception. As the city continues to recover, it will be interesting to see how crime patterns will continue to evolve in a post-pandemic era.
+
+
+
+
+
+
 
 [Link to another page](./another-page.html).
 
