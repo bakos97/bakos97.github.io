@@ -34,13 +34,6 @@ As you can see, there were increases in vandalism incidents in almost all distri
 
 [Link to another page](./another-page.html).
 
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 ## Header 2
 
@@ -48,7 +41,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 >
 > When something is important enough, you do it even if the odds are not in your favor.
 
-### Header 3
+<!-- ### Header 3
 
 ```js
 // Javascript code with syntax highlighting.
@@ -148,4 +141,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ```
 The final element.
-```
+``` -->
