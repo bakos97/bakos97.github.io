@@ -21,12 +21,11 @@ Vandalism saw a massive increase of 66.67% during the pandemic, possibly due to 
 
 In contrast, the pandemic had a significant positive impact on civil sidewalks, which witnessed a dramatic decrease of 92.42%. Meanwhile, prostitution, liquor laws, and gambling all witnessed a decrease of over 60%.
 
-COVID-19 has upended life in San Francisco, and its impact on crime rates in the city is no exception. As the city continues to recover, it will be interesting to see how crime patterns will continue to evolve in a post-pandemic era.
-
+But what about vandalism in San Francisco's different districts? We made a map to show you the number of vandalism incidents in each district during 2018-2019 and 2020-2021. The colors represent the number of incidents, with lighter colors indicating more incidents. Check it out below!
 
 <h2>Vandalism Map over SF</h2>
 <iframe src="https://bakos97.github.io/vandalism_map_dual.html" width="100%" height="500"></iframe>
-
+As you can see, there were increases in vandalism incidents in almost all districts during the pandemic. The central district saw the most significant increase, going from 23 incidents to 42 incidents. The northern district also had a significant increase, going from 28 incidents to 53 incidents. Richmond district saw a increase in vandalism incidents, going from 7 incidents to 16 incidents.
 
 
 
