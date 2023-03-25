@@ -24,6 +24,10 @@ In contrast, the pandemic had a significant positive impact on civil sidewalks, 
 COVID-19 has upended life in San Francisco, and its impact on crime rates in the city is no exception. As the city continues to recover, it will be interesting to see how crime patterns will continue to evolve in a post-pandemic era.
 
 
+<h2>Vandalism Map over SF</h2>
+<iframe src="https://bakos97.github.io/vandalism_map_dual.html" width="100%" height="500"></iframe>
+
+
 
 
 
