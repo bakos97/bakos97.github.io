@@ -31,7 +31,7 @@ As you can see, there were increases in vandalism incidents in almost all distri
 
 
 
-
+<!-- 
 [Link to another page](./another-page.html).
 
 
@@ -39,7 +39,7 @@ As you can see, there were increases in vandalism incidents in almost all distri
 
 > This is a blockquote following a header.
 >
-> When something is important enough, you do it even if the odds are not in your favor.
+> When something is important enough, you do it even if the odds are not in your favor. -->
 
 <!-- ### Header 3
 
