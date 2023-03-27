@@ -40,4 +40,17 @@ As time went on, people became more and more desperate and took bigger and bigge
 This article confirms our finding that vandalism has increased during the pandemic in San Francisco, and offers insight into the reasons why. It also highlights the struggles of local businesses during this challenging time. We believe that by understanding the impact of the pandemic on crime in San Francisco, we can help support the community in moving forward. For more information, you can read the full article here:[Link to article](https://www.sfchronicle.com/food/article/Break-ins-vandalism-strike-Bay-Area-restaurants-15188428.php).
  
 
+## Exploring Crime in San Francisco During the Pandemic
+The COVID-19 pandemic has brought unprecedented changes to the world, and San Francisco has not been immune to its effects. As we've seen, crime patterns in the city have been significantly impacted. In this section, we will use an interactive Bokeh visualization to examine the relationship between crime rates and the pandemic's timeline in San Francisco.
 
+<iframe src="https://bakos97.github.io/crime_vs_covid4.html" width="100%" height="500"></iframe>
+Crime vs COVID-19 Cases in San Francisco: This plot shows the number of reported crimes and COVID-19 cases in San Francisco from 2018 to present. The top line represents the number of COVID-19 cases, while the dots represent the number of reported crimes in various categories. The plot shows that crime rates were generally stable throughout 2018 and 2019, but decreased significantly during the COVID-19 pandemic in 2020. The plot also highlights the categories of crime with the highest incidence rates in the city.
+
+Crime and COVID-19 have been two major concerns for residents and policymakers in San Francisco. In this plot, we explore how these two issues intersect over time. Using data from the San Francisco Police Department and the San Francisco Department of Public Health, we can see the daily count of various types of crime alongside the number of new COVID-19 cases.
+
+## Conclusion
+The pandemic has significantly impacted crime patterns in San Francisco. While some categories of crime decreased during the pandemic, others increased dramatically, and this trend is especially evident in the case of vandalism. Our analysis indicates that the closure of businesses and public spaces may have contributed to the increase in vandalism incidents during the pandemic. Our interactive Bokeh visualization shows that there is a clear correlation between the pandemic's timeline and crime rates in San Francisco, suggesting that the pandemic has had a direct impact on public safety in the city.
+
+By understanding the impact of the pandemic on crime patterns in San Francisco, we can better support the community as we move forward. Policymakers can use this information to identify areas that require additional attention and resources. Additionally, we can use this information to raise awareness about the struggles that local businesses have faced during the pandemic and the importance of supporting them during these challenging times.
+
+As we continue to navigate the pandemic's effects, it is critical to remain vigilant about public safety in our cities. By working together, we can help ensure that San Francisco remains a safe and vibrant place to live and work for years to come.
