@@ -41,4 +41,3 @@ This article confirms our finding that vandalism has increased during the pandem
  
 
 
-<iframe src="https://bakos97.github.io/crime_vs_covid4.html" width="100%" height="500"></iframe>
