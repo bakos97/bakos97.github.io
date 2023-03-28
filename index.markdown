@@ -17,11 +17,11 @@ Delving deeper into the data, we find that the pandemic has had an unequal impac
   <figcaption>This bar chart shows the incident categories with the greatest change in average count during the pandemic in San Francisco. The categories are ranked by percentage change, with the largest positive and negative changes at the top and bottom, respectively. The incident category "Civil Sidewalks" had the greatest negative change, with an average count decrease of 92.42% during the pandemic compared to the 2018-2019 period. The incident category "Vandalism" had the greatest positive change, with an average count increase of 66.67% during the pandemic compared to the 2018-2019 period.</figcaption>
 </figure>
 
-Vandalism saw a massive increase of 66.67% during the pandemic, possibly due to the closure of public spaces and businesses, which may have left them more vulnerable to property damage. Burglary and motor vehicle theft also witnessed notable increases of over 40%.
+Vandalism had a massive increase of 66.67% during the active corona years. This may be due to the closure of public spaces and businesses, which could have left them more vulnerable to property damage. The categories burglary and motor vehicle theft also witnessed a increases of over 40%.
 
-In contrast, the pandemic had a significant positive impact on civil sidewalks, which witnessed a dramatic decrease of 92.42%. Meanwhile, prostitution, liquor laws, and gambling all witnessed a decrease of over 60%.
+The pandemic had some significant positive impact the civil sidewalks crimes, which had a decrease of total 92.42%. Prostitution, liquor laws, and gambling also witnessed a decrease of over 60%.
 
-But what about vandalism in San Francisco's different districts? We made a map to show you the number of vandalism incidents in each district during 2018-2019 and 2020-2021. The colors represent the number of incidents, with lighter colors indicating more incidents. Check it out below!
+We wish to explore how vandalism state in San Francisco's different districts. By making a map to show you the number of vandalism incidents in each district in SF during 2018-2019 and 2020-2021. Check it out below!
 
 <h2>Vandalism Map over SF</h2>
 <iframe src="https://bakos97.github.io/vandalism_map_dual.html" width="100%" height="500"></iframe>
