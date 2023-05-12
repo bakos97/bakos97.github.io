@@ -9,7 +9,7 @@ Our journey takes us through bustling streets and serene landscapes as we unrave
 Copenhagen, Denmark's capital, is a vibrant, cosmopolitan city. But beneath the surface, stories of gender disparities in income, parental leave, and education unfold.
 
 <h3>Interactive plot of gender disparities in income in Copenhagen over the years</h3>
-<iframe src="https://bakos97.github.io/income_interactive.html" width="100%" height="100%"></iframe>
+<iframe src="https://bakos97.github.io/income_interactive.html" width="100%" height="800"></iframe>
 
 
 This interactive plot reveals the stark disparities between male and female income in Copenhagen over the years. Notice the pronounced gap in wealthy districts like Gentofte, Hørsholm, and Rudersdal. These areas, with their high average incomes, seem to harbor larger gender pay gaps.
