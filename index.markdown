@@ -32,7 +32,6 @@ This map plot illustrates the income gap across various regions in Denmark from 
 The Next Steps
 We've uncovered the income disparities between genders in Copenhagen and Denmark, but our journey is far from over. We now turn our attention towards the issue of parental leave. How does this key aspect of life contribute to the gender disparities we observe? Or should we delve into education, another critical facet of our society? Whichever path we choose, there's much more to uncover and understand.
 
-you can read the full article here:[Link to article](https://www.sfchronicle.com/food/article/Break-ins-vandalism-strike-Bay-Area-restaurants-15188428.php).
 
 ## Parental Leave
 
