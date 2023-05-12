@@ -19,7 +19,7 @@ Next, we zoom into the districts within Denmark, examining the disparities at a 
 
 From a bird's eye view, this interactive plot reveals the stark disparities between male and female income across all districts in Denmark. Notice the pronounced gap in wealthier districts like Gentofte, Hørsholm, and Rudersdal. These areas, with their high average incomes, harbor larger gender pay gaps, hinting at a trend of higher income disparities in wealthier districts.
 
-## A Geographic Perspective: Visualizing Disparities Across Denmark
+### A Geographic Perspective: Visualizing Disparities Across Denmark
 
 With the help of geographic visualization, we can get a clearer picture of how these disparities are distributed across Denmark.
 
