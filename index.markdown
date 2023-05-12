@@ -51,6 +51,8 @@ Copenhagen is number 106 in the list of areas sorted by parental leave gap, in a
 
 ![Parental leave days comparison between Copenhagen, Ishøj and All Denmark](parental_gap_worst_cph.png)
 
+Looking at the graph for Ishøj, it's very interesting to see how the parental leave for women is trending upwards.
+
 Now we want to see if education could possibly correlate to the length of the parental leave. For that we're going to look at the fathers, their length of education and their average length of parental leave. The graph shows data from 2021.
 
 ![Average parental leave days for fathers compared to their education](parental_gap_education.png)
