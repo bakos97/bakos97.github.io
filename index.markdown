@@ -45,13 +45,13 @@ But looking at the data it seems that this split of 32 weeks was mostly taken by
 
 Now new rules have been accepted in Denmark for parental leave that took effect in August 2022. Where each parent has an earmarked 11 weeks for parental leave and these weeks cannot be shared between parents. But this is higher than the average has been for men ever in Copenhagen (https://www.thelocal.dk/20211026/denmark-agrees-new-rules-for-parental-leave). It will be very interesting to see how these numbers change since the new rules took place. 
 
-To circle back to the income gap between the genders. 
-The top three locations that have the highest income gaps are ranking number 77, 98 and 101 on the list of areas sorted by parental leave gap. While the bottom three with the lowest income gaps rank number 110, 88 and 85 on that same list for parental leave gap. Which maybe does not tell us a lot, but from those numbers alone there does not seem to be correlation between the income gap and parental leave gap. 
+To circle back to the income gap between the genders. The top three locations that had the highest income gaps (Hørsholm, Gentofte and Rudersdal) are ranking number 77, 97 and 100 on the list of areas sorted by parental leave gap. The three locations that had the lowest income gaps (Lolland, Bornholm and Langeland) are ranking number 109, 87 and 85 on that same list for parental leave gap. Which maybe does not tell us a lot, but from those numbers alone there does not seem to be correlation between the income gap and parental leave gap. But Lolland is doing well by being the location with the least gap in parental leave. 
 
+Copenhagen is number 106 in the list of areas sorted by parental leave gap, in a list consisting of 109 locations. The following graph shows Copenhagen in comparison to all of Denmark and Ishøj, which was the highest ranking location, i.e. has the biggest gap. 
 
-Copenhagen is 106 in the list of areas sorted by parental leave gap.
-The areas that have the most gap between genders when it comes to parental leave are: ['Ishøj', 'Lemvig', 'Greve']
-The areas that have the least gap are: ['Frederiksberg', 'Kalundborg', 'Lolland']
+![Parental leave days comparison between Copenhagen, Ishøj and All Denmark](parental_gap_worst_cph.png)
+
+%Now compare with education
 
 ## Education
 
