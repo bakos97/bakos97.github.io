@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Assignment 2
-description: How has the pandemic effected crimes in SF
+title: Final project
+description: Unveiling Gender Disparities
 
 # title: Assignment 2
 # email: s222681@dtu.dk
