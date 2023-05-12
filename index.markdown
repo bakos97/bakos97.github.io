@@ -17,7 +17,8 @@ Next, we zoom into the districts within Denmark, examining the disparities at a 
 <h3>Interactive plot of gender disparities in income in Denmark over the years</h3>
 <iframe src="https://bakos97.github.io/income_interactive.html" width="100%" height="575"></iframe>
 
-From a bird's eye view, this interactive plot reveals the stark disparities between male and female income across all districts in Denmark. Notice the pronounced gap in wealthier districts like Gentofte, Hørsholm, and Rudersdal. These areas, with their high average incomes, harbor larger gender pay gaps, hinting at a trend of higher income disparities in wealthier districts.
+This interactive plot reveals the stark disparities between male and female income across all districts in Denmark. Notice the pronounced gap in wealthier districts like Gentofte, Hørsholm, and Rudersdal. These areas, with their high average incomes, harbor larger gender pay gaps, hinting at a trend of higher income disparities in wealthier districts. As our analysis shows, income disparities between genders exist in Copenhagen as well as other parts of Denmark. This observation is echoed by general insights provided by [Denmark.dk](https://denmark.dk/society-and-business/gender-equality), which acknowledges the existence of a gender pay gap in Denmark despite the country's strong performance in gender equality. Moreover, the underrepresentation of women in top management positions, as highlighted by Denmark.dk, could potentially contribute to this wage gap, as such positions often command higher salaries.
+
 
 ### A Geographic Perspective: Visualizing Disparities Across Denmark
 
