@@ -35,9 +35,11 @@ We've uncovered the income disparities between genders in Copenhagen and Denmark
 
 ## Parental Leave
 
+Now we want to take a dive into parental leave in Copenhagen and compare it to other locations in Denmark. Also, we want to explore how parental leave could possible correlate to education and income. In the following graph we can see how over the years the gap is becoming bigger on average for all of Denmark compared to how Copenhagen is developing into a smaller gap in the recent years. For all of Denmark the gap was bigger in 2021 then it was in 2015 while in Copenhagen it's the opposite. It is interesting that the gap seems to be getting bigger in all of Denmark, since over the recent years equality between genders have been a subject of a lot of conversations. This tells us that the equality in paternal leave in Copenhagen is better compared to all of Denmark and it's developing in the right direction.
+
+
 ![Development of gap in parental leave in Copenhagen compared to All Denmark](parental_gap_line_plot.png)
 
-In the above graph we can see how over the years the gap is becoming bigger on average for all of Denmark compared to how Copenhagen is developing into a smaller gap in the recent years. For all of Denmark the gap was bigger in 2021 then it was in 2015 while in Copenhagen the gap is smaller in 2021 than it was in 2015. It is interesting that the gap seems to be getting bigger in all of Denmark, since over the recent years equality between genders have been a subject of a lot of conversations. This tells us that the equality in paternal leave in Copenhagen is better compared to all of Denmark and it's developing in the right direction, even though it's happening slowly.
 
 Even though the parental leave in Denmark is quite good, the rights between men and women were not the same. Before, with children that are born before August 2022, women recieved paid leave for four weeks before the birth of a child and 14 weeks after. While men received paid leave for two weeks after the birth. Then the parents split up to 32 weeks of paid leave (https://denmark.dk/society-and-business/equality#:~:text=Did%20you%20know,to%2032%20weeks%20paid%20leave.).
 
