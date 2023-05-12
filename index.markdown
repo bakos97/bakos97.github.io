@@ -56,7 +56,7 @@ Copenhagen is number 106 in the list of areas sorted by parental leave gap, in a
 ## Education
 
 ![Men and women in the age of 30-34 years old, who has finished their masters in Copenhagen in comparison to Denmark](masters_education.png)
-We will now conduct a detailed analysis of education, which can provide valuable insights into gender disparities in Copenhagen compared to the rest of Denmark. From 2005 to 2022, there has been a steady increase in the number of individuals pursuing higher education among both men and women. In this case, we are specifically examining the age group of 30 to 34 years that has completed their master’s degrees, a stage of adulthood where individuals have most likely attained their highest level of education before pursuing a Ph.D.
+We will now conduct a detailed analysis of education, which can provide valuable insights into gender disparities in Copenhagen compared to the rest of Denmark. From 2005 to 2022, there has been a steady increase in the number of individuals pursuing higher education among both men and women. In this case, we are specifically examining the age group of 30 to 34 years that has completed their master’s degrees, which is usually the age where individuals have most likely attained their highest level of education before pursuing a Ph.D.
 
 The rising number of men and women pursuing higher education indicates a growing emphasis on obtaining higher level of education throughout Denmark. However, a noteworthy observation is the widening gender gap in education, favoring women. This trend becomes especially noticeable when examining the percentages, despite the income gap favoring men. It is worth noting that the gender gap is slightly smaller in Copenhagen compared to the rest of Denmark.
 
