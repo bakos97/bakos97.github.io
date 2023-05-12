@@ -35,6 +35,23 @@ We've uncovered the income disparities between genders in Copenhagen and Denmark
 
 ## Parental Leave
 
+![Development of gap in parental leave in Copenhagen compared to All Denmark](parental_gap_line_plot.png)
+
+In the above graph we can see how over the years the gap is becoming bigger for the average of all of Denmark compared to how Copenhagen is developing into a smaller gap in the recent years. For all of Denmark the gap was bigger in 2021 then it was in 2015 while in Copenhagen the gap is smaller in 2021 than it was in 2015. It's also interesting to see how the gap is smaller in Copenhagen compared to all of Denmark. Which tells us that the equality in paternal leave in Copenhagen is better compared to all of Denmark and it's developing in the right direction, even though it's happening slowly.
+
+Even though the parental leave in Denmark is quite generous, the rights between men and women were not the same. Before, with children that are born before August 2022, women recieved paid leave for four weeks before the birth of a child and 14 weeks after. While men received paid leave for two weeks after the birth. Then the parents split up to 32 weeks of paid leave (https://denmark.dk/society-and-business/equality#:~:text=Did%20you%20know,to%2032%20weeks%20paid%20leave.).
+
+But looking at the data it seems that this split of 32 weeks mostly was taken by the women. Which in the past it was very 'normal' for the women to take most of the parental leave. This was explained away with that it was the obvious choice since men are the ones that earn more and it would cost the household more to have the men on parental leave. 
+
+Now new rules have been accepted in Denmark for parental leave that took effect in August 2022. Where each parent has an earmarked 11 weeks for parental leave and these weeks cannot be shared between parents. But this is higher than the average has been for men ever in Copenhagen (https://www.thelocal.dk/20211026/denmark-agrees-new-rules-for-parental-leave). It will be very interesting to see how these numbers change since the new rules took place. 
+
+The top three locations that have the highest income gaps are ranking number 77, 98 and 101 on the list of areas sorted by parental leave gap. While the bottom three with the lowest income gaps rank number 110, 88 and 85 on that same list for parental leave gap. Which maybe does not tell us a lot, but from those numbers alone there does not seem to be correlation between the income gap and parental leave gap. 
+
+
+Copenhagen is 106 in the list of areas sorted by parental leave gap.
+The areas that have the most gap between genders when it comes to parental leave are: ['Ishøj', 'Lemvig', 'Greve']
+The areas that have the least gap are: ['Frederiksberg', 'Kalundborg', 'Lolland']
+
 ## Education
 
 ![Men and women in the age of 30-34 years old, who has finished their masters in Copenhagen in comparison to Denmark](Masters.png)
