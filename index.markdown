@@ -74,5 +74,5 @@ While there has been a general increase in education levels across the board, th
 
 Based on the findings presented in this article (https://politiken.dk/indland/uddannelse/art9287557/For-knap-40-%C3%A5r-siden-tog-lige-mange-m%C3%A6nd-og-kvinder-en-videreg%C3%A5ende-uddannelse.-Nu-har-kvinder-lagt-enorm-afstand-til-m%C3%A6ndene#:~:text=opretter%20en%20profil.-,Forskellen%20mellem%20andelen%20af%20kvinder%20og%20m%C3%A6nd%20med%20en%20videreg%C3%A5ende,nye%20tal%20fra%20Danmarks%20Statistik.) from Politiken, which is a well known broadsheet daily newspaper in Denmark, the gender disparity in higher education was less distinct four decades ago, with an equal number of men and women pursuing advanced degrees. However, the current situation shows a significant increase in the disparity, favoring women. The article further highlights the reasons behind the income gap, attributing it to factors such as women's tendency to choose fields with lower wages, such as humanities, while men often opt for higher-paying job revolving around science. Additionally, the article mentions that women tend to take more parental leave and work part-time more frequently compared to men, which is something we already have highlighted. 
 
-
+## Conclusion
 
