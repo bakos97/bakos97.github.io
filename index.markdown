@@ -36,7 +36,8 @@ you can read the full article here:[Link to article](https://www.sfchronicle.com
 ## Parental Leave
 
 ## Education
- 
+
+![Men and women in the age of 30-34 years old, who has finished their masters in Copenhagen in comparison to Denmark](masters.png)
 
 
 
