@@ -54,8 +54,8 @@ The areas that have the least gap are: ['Frederiksberg', 'Kalundborg', 'Lolland'
 
 ## Education
 
-![Men and women in the age of 30-34 years old, who has finished their masters in Copenhagen in comparison to Denmark](Masters.png)
-
+![Men and women in the age of 30-34 years old, who has finished their masters in Copenhagen in comparison to Denmark](masters_education.png)
+![Education level comparison between genders and area in year 2005 and 2022](gender_education.png)
 
 
 
