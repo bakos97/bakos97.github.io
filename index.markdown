@@ -6,7 +6,7 @@ layout: default
 
 Our journey takes us through bustling streets and serene landscapes as we unravel the narrative of gender disparities in income, parental leave, and education. This tale is multi-faceted, touching upon income, parental leave, and education.
 
-Link to [explainer notebook](https://drive.google.com/file/d/1nEpe7mZvxkY8F2PwGQeIp7TIbfN-N4Fg/view?usp=sharing)
+Link to [explainer notebook](https://drive.google.com/file/d/1IQJXyqPlaD76jObAv8IUAR2NdQ-Gtn1K/view?usp=sharing)
 
 ## The Heart of the Matter: Income Disparities
 
