@@ -2,37 +2,43 @@
 
 ## Project Overview
 Personal portfolio website hosted on GitHub Pages at bakos97.github.io.
-Targeted at recruiters and professional contacts.
+Targeted at recruiters and professional contacts — but designed to impress
+with a bold, design-heavy vaporwave + programming aesthetic.
 
-## Direction: Moving Away from Jekyll
-This site is transitioning away from Jekyll and the Cayman remote theme (`_config.yml`)
-toward a fully custom, hand-crafted static site. The goals are:
+## Design Direction: Vaporwave x Code
+The site uses a **retro-futuristic vaporwave** aesthetic fused with **programming culture**.
+This is an intentional departure from generic developer portfolios — it should feel
+like stepping into a neon-lit terminal from the future.
 
-- **Full design control** — no theme constraints or Jekyll layout abstractions
-- **Polished, modern look** — custom animations, typography, and layout that stand out
-- **Zero Jekyll dependencies** — no Liquid templating, no `_layouts/`, no `_includes/`, no remote themes
-- **Simple deploys** — pure HTML/CSS/JS served directly by GitHub Pages without Jekyll processing
+### Visual Identity
+- **Color palette:** Deep navy/purple backgrounds, hot pink (#ff71ce), cyan (#01cdfe),
+  purple (#b967ff), warm yellow (#fffb96) — classic vaporwave
+- **Typography:** Monospace-forward (`Fira Code`) for the hacker feel, display font
+  for headings
+- **Effects:** Neon text glow, CRT scanlines, glitch animations, chromatic aberration
+- **Background:** Animated perspective grid (the iconic vaporwave floor grid) rendered on canvas
+- **Interactions:** Mouse-responsive parallax, typing animations, smooth scroll reveals,
+  glitch hover effects
 
-### Migration checklist
-- [ ] Remove or replace `_config.yml` (only keep if needed for GitHub Pages settings like custom domain)
-- [ ] Eliminate any Liquid template syntax (`{{ }}`, `{% %}`) from HTML files
-- [ ] Ensure all styling is in custom CSS, not inherited from the Cayman theme
-- [ ] Add a `.nojekyll` file to the repo root to disable Jekyll processing on GitHub Pages
+### Personality
+- Vaporwave aesthetic = nostalgic, artistic, unconventional
+- Programming references = terminal prompts, code snippets, syntax highlighting
+- The site should feel alive — subtle motion everywhere, reactive to the user
 
 ## Tech Stack
 - Static HTML/CSS/JS — no build step, no static site generator
 - GitHub Pages for hosting (with `.nojekyll` to bypass Jekyll)
+- HTML5 Canvas for animated background effects
 - No framework dependencies — vanilla front-end
 - CSS custom properties for theming; no preprocessors required
 
 ## Structure
-- `index.html` — Main portfolio landing page (hero, about, projects, skills, contact)
+- `index.html` — Main portfolio page (hero, about, projects, skills, contact)
 - `projects/gender-disparities.html` — Existing data analysis project page
-- `css/style.css` — All styles (replaces any Cayman theme styling)
-- `js/main.js` — Interactions and animations
+- `css/style.css` — All styles (vaporwave theme, neon effects, responsive layout)
+- `js/main.js` — Retro grid canvas, glitch effects, typing animation, scroll interactions
 - `assets/` — Images and other static assets
-- `_config.yml` — Legacy Jekyll config (to be removed or minimized)
-- `.nojekyll` — Marker file to disable Jekyll on GitHub Pages (to be added)
+- `.nojekyll` — Marker file to disable Jekyll on GitHub Pages
 
 ## Development
 - Preview locally: open `index.html` in a browser, or use `python3 -m http.server`
@@ -40,13 +46,9 @@ toward a fully custom, hand-crafted static site. The goals are:
 - No build tools, bundlers, or package managers needed
 
 ## Conventions
-- Keep pages lightweight and fast-loading
-- Mobile-first responsive design
-- Accessible markup (semantic HTML, alt text, sufficient contrast)
+- Keep pages lightweight and fast-loading (canvas should be performant)
+- Mobile-first responsive design (canvas effects can be simplified on mobile)
+- Accessible markup (semantic HTML, alt text, sufficient contrast despite neon theme)
 - All colors defined as CSS custom properties in `:root`
 - Use BEM-like class naming in CSS
-- Avoid introducing any Jekyll or templating dependencies
-
-## Content Placeholders
-Sections marked with `<!-- PLACEHOLDER -->` need the owner's real information filled in.
-Search for "PLACEHOLDER" to find all spots that need personalization.
+- No Jekyll or templating dependencies

@@ -12,10 +12,13 @@
 </head>
 <body>
 
+  <!-- ======== CANVAS BACKGROUND ======== -->
+  <canvas id="vaporwave-bg" aria-hidden="true"></canvas>
+
   <!-- ======== NAV ======== -->
   <nav class="nav">
     <div class="container">
-      <a href="#" class="nav__logo">&lt;bakos /&gt;</a>
+      <a href="#" class="nav__logo">&gt; bakos_</a>
       <div class="nav__links">
         <a href="#about"><span>01.</span> About</a>
         <a href="#skills"><span>02.</span> Skills</a>
@@ -31,26 +34,45 @@
   <!-- ======== HERO ======== -->
   <section class="hero" id="hero">
     <div class="container">
-      <p class="hero__greeting">Hi, my name is</p>
-      <h1 class="hero__name">Christian Bakos Leirv&aring;g.</h1>
-      <h2 class="hero__tagline">I like to build things.</h2>
+      <p class="hero__terminal">
+        <span id="typed-prompt"></span><span class="cursor"></span>
+      </p>
+      <h1 class="hero__name">
+        <span class="glitch highlight" data-text="Christian">Christian</span><br/>
+        <span class="glitch highlight" data-text="Bakos Leirv&aring;g.">Bakos Leirv&aring;g.</span>
+      </h1>
+      <h2 class="hero__tagline">I build things &amp; break data.</h2>
       <p class="hero__description">
-        I'm a DTU graduate with a focus on data science, machine learning,
-        and cognitive modelling. I enjoy turning complex datasets into
-        clear insights and building tools that solve real problems.
+        DTU graduate turning complex datasets into clear insights and building
+        tools that solve real problems. Data science, machine learning, and
+        cognitive modelling — with a vaporwave soul.
       </p>
       <div class="hero__cta">
         <a href="#projects" class="btn btn--primary">View My Work</a>
         <a href="#contact" class="btn btn--outline">Get In Touch</a>
       </div>
     </div>
+
+    <!-- Floating code snippets (decorative) -->
+    <div class="code-float" style="top: 15%; right: 8%;" aria-hidden="true">
+import numpy as np
+model.fit(X_train)
+predictions = model
+  .predict(X_test)</div>
+    <div class="code-float" style="bottom: 20%; right: 5%;" aria-hidden="true">
+def analyze(data):
+  return data
+    .groupby('year')
+    .mean()</div>
   </section>
+
+  <div class="neon-divider"></div>
 
   <!-- ======== ABOUT ======== -->
   <section class="section" id="about">
     <div class="container">
       <h2 class="section__title" data-number="01">About Me</h2>
-      <p class="section__subtitle">A quick snapshot of who I am and what drives me.</p>
+      <p class="section__subtitle">// who I am and what drives me</p>
       <div class="about__content fade-in">
         <div class="about__text">
           <p>
@@ -81,11 +103,13 @@
     </div>
   </section>
 
+  <div class="neon-divider"></div>
+
   <!-- ======== SKILLS ======== -->
   <section class="section" id="skills">
     <div class="container">
       <h2 class="section__title" data-number="02">Skills &amp; Tools</h2>
-      <p class="section__subtitle">Technologies and areas I work with regularly.</p>
+      <p class="section__subtitle">// technologies I work with regularly</p>
       <div class="skills__grid fade-in">
 
         <div class="skill-card">
@@ -120,9 +144,9 @@
           <ul class="skill-card__list">
             <li>Git / GitHub</li>
             <li>HTML / CSS / JS</li>
-            <li>Jekyll</li>
             <li>GitHub Pages</li>
             <li>UNet / VGGnet</li>
+            <li>Fly.io</li>
           </ul>
         </div>
 
@@ -130,11 +154,13 @@
     </div>
   </section>
 
+  <div class="neon-divider"></div>
+
   <!-- ======== PROJECTS ======== -->
   <section class="section" id="projects">
     <div class="container">
       <h2 class="section__title" data-number="03">Projects</h2>
-      <p class="section__subtitle">Highlighted work from university and personal exploration.</p>
+      <p class="section__subtitle">// highlighted work from university and personal exploration</p>
 
       <!-- Project 1 — Gender Disparities -->
       <article class="project fade-in">
@@ -251,7 +277,7 @@
         </div>
       </article>
 
-      <!-- Project 3 — AI Image Segmentation -->
+      <!-- Project 7 — AI Image Segmentation -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
@@ -277,7 +303,7 @@
         </div>
       </article>
 
-      <!-- Project 4 — Cognitive Modelling of Face Perception -->
+      <!-- Project 8 — Cognitive Modelling of Face Perception -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
@@ -302,7 +328,7 @@
         </div>
       </article>
 
-      <!-- Project 5 — Heart Failure ML -->
+      <!-- Project 9 — Heart Failure ML -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
@@ -328,11 +354,13 @@
     </div>
   </section>
 
+  <div class="neon-divider"></div>
+
   <!-- ======== CONTACT ======== -->
   <section class="section contact" id="contact">
     <div class="container">
-      <h2 class="section__title" data-number="04" style="justify-content:center;">Get In Touch</h2>
-      <p class="section__subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">
+      <h2 class="section__title" data-number="04">Get In Touch</h2>
+      <p class="section__subtitle">
         I'm open to opportunities and always happy to connect.
         Whether you have a question, a project idea, or just want to say hi — drop me a line.
       </p>
@@ -346,6 +374,7 @@
   <!-- ======== FOOTER ======== -->
   <footer class="footer">
     <div class="container">
+      <span class="neon-line" aria-hidden="true"></span>
       <p>Designed &amp; built by Christian Bakos Leirv&aring;g</p>
     </div>
   </footer>
