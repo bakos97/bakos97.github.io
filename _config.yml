@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Bakos — Portfolio
+title: Christian Bakos Leirvaag — Portfolio
 description: Personal portfolio showcasing data science and software engineering projects.
 
 # title: Assignment 2
