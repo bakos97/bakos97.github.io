@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bakos — Portfolio</title>
+  <meta name="description" content="Personal portfolio showcasing data science and software engineering projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav__logo">&lt;bakos /&gt;</a>
+      <div class="nav__links">
+        <a href="#about"><span>01.</span> About</a>
+        <a href="#skills"><span>02.</span> Skills</a>
+        <a href="#projects"><span>03.</span> Projects</a>
+        <a href="#contact"><span>04.</span> Contact</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <!-- PLACEHOLDER: Replace greeting and name with your own -->
+      <p class="hero__greeting">Hi, my name is</p>
+      <h1 class="hero__name">Bakos<!-- PLACEHOLDER: your full name --></h1>
+      <h2 class="hero__tagline">I turn data into insight &amp; code into solutions.</h2>
+      <p class="hero__description">
+        <!-- PLACEHOLDER: Write 1–2 sentences about yourself -->
+        I'm a data-driven engineer who loves digging into complex datasets and building
+        tools that make information accessible. Currently based in Copenhagen, Denmark.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__title" data-number="01">About Me</h2>
+      <p class="section__subtitle">A quick snapshot of who I am and what drives me.</p>
+      <div class="about__content fade-in">
+        <div class="about__text">
+          <!-- PLACEHOLDER: personalise the paragraphs below -->
+          <p>
+            I'm a student at the Technical University of Denmark (DTU) with a passion
+            for data science, software engineering, and making sense of the world through
+            numbers. My work sits at the intersection of analytics and engineering —
+            whether that means building interactive visualisations, training models, or
+            shipping production code.
+          </p>
+          <p>
+            Outside of coursework, I enjoy working on projects that have real societal
+            relevance — like exploring gender disparities in income, education, and
+            parental leave across Denmark.
+          </p>
+          <p>
+            When I'm not coding you'll find me exploring Copenhagen by bike, following
+            football, or experimenting with new recipes in the kitchen.
+            <!-- PLACEHOLDER: replace hobbies with your own -->
+          </p>
+        </div>
+        <div class="about__photo-wrapper">
+          <!-- PLACEHOLDER: add your photo as assets/profile.jpg -->
+          <div class="about__photo" role="img" aria-label="Profile photo placeholder">
+            Your photo here<br/>(assets/profile.jpg)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SKILLS ======== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section__title" data-number="02">Skills &amp; Tools</h2>
+      <p class="section__subtitle">Technologies and areas I work with regularly.</p>
+      <div class="skills__grid fade-in">
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128202;</div>
+          <h3 class="skill-card__title">Data Science &amp; Analytics</h3>
+          <ul class="skill-card__list">
+            <!-- PLACEHOLDER: adjust skills to match your own -->
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Scikit-learn</li>
+            <li>Matplotlib</li>
+            <li>Plotly</li>
+            <li>Jupyter</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128187;</div>
+          <h3 class="skill-card__title">Software Engineering</h3>
+          <ul class="skill-card__list">
+            <!-- PLACEHOLDER: adjust skills to match your own -->
+            <li>JavaScript</li>
+            <li>HTML / CSS</li>
+            <li>Git</li>
+            <li>SQL</li>
+            <li>REST APIs</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#9881;&#65039;</div>
+          <h3 class="skill-card__title">Other</h3>
+          <ul class="skill-card__list">
+            <!-- PLACEHOLDER: adjust skills to match your own -->
+            <li>Data Visualisation</li>
+            <li>Statistical Analysis</li>
+            <li>Machine Learning</li>
+            <li>Agile / Scrum</li>
+            <li>Technical Writing</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJECTS ======== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title" data-number="03">Projects</h2>
+      <p class="section__subtitle">Highlighted work — click through for details.</p>
+
+      <!-- Project 1 — Gender Disparities -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <img
+            src="income_gap_comparison.png"
+            alt="Income gap comparison chart"
+            class="project__image"
+          />
+          <div class="project__content">
+            <p class="project__label">Featured Project</p>
+            <h3 class="project__title">Gender Disparities in Denmark</h3>
+            <p class="project__description">
+              An in-depth data analysis exploring gender gaps in income, parental leave,
+              and education across Copenhagen and Denmark — complete with interactive
+              maps and time-series visualisations.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>Plotly</li>
+              <li>Jekyll</li>
+              <li>GitHub Pages</li>
+            </ul>
+            <div class="project__links">
+              <a href="projects/gender-disparities.html">Read the Analysis &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 — Placeholder -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label"><!-- PLACEHOLDER: Featured / Side --></p>
+            <h3 class="project__title"><!-- PLACEHOLDER: Project Name --></h3>
+            <p class="project__description">
+              <!-- PLACEHOLDER: Short description of another project -->
+              Add your next project here. Describe what it does, why it matters,
+              and what you learned.
+            </p>
+            <ul class="project__tech">
+              <!-- PLACEHOLDER: tech tags -->
+              <li>Tech A</li>
+              <li>Tech B</li>
+            </ul>
+            <div class="project__links">
+              <!-- PLACEHOLDER: link to live demo or repo -->
+              <a href="#">View Project &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section__title" data-number="04" style="justify-content:center;">Get In Touch</h2>
+      <p class="section__subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">
+        I'm open to opportunities and always happy to connect.
+        Whether you have a question, a project idea, or just want to say hi — drop me a line.
+      </p>
+      <p class="contact__email">
+        <!-- PLACEHOLDER: your email -->
+        <a href="mailto:your.email@example.com" class="btn btn--primary">Say Hello</a>
+      </p>
+      <div class="contact__socials">
+        <a href="https://github.com/bakos97" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <!-- PLACEHOLDER: add your LinkedIn, Twitter, etc. -->
+        <a href="https://linkedin.com/in/PLACEHOLDER" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by Bakos<!-- PLACEHOLDER: your name --></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
