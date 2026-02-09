@@ -18,8 +18,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Final project
-description: Unveiling Gender Disparities
+title: Christian Bakos Leirvaag — Portfolio
+description: Personal portfolio showcasing data science and software engineering projects.
 
 # title: Assignment 2
 # email: s222681@dtu.dk

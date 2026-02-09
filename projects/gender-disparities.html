@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gender Disparities in Denmark — Christian Bakos Leirv&aring;g</title>
+  <meta name="description" content="Data analysis of gender disparities in income, parental leave, and education in Copenhagen and Denmark." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Project-page-specific overrides */
+    .project-page { padding-top: 6rem; }
+    .project-page__header { margin-bottom: 3rem; }
+    .project-page__title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      color: var(--color-heading);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .project-page__meta {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--color-accent);
+      margin-bottom: 0.5rem;
+    }
+    .project-page__intro {
+      color: var(--color-text-muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    .project-page h2 {
+      font-size: 1.5rem;
+      color: var(--color-heading);
+      margin: 3rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .project-page h3 { font-size: 1.15rem; color: var(--color-heading); margin: 2rem 0 0.75rem; }
+    .project-page p { margin-bottom: 1rem; max-width: 750px; }
+    .project-page img {
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      margin: 1.5rem 0;
+    }
+    .project-page iframe {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      margin: 1.5rem 0;
+      background: #fff;
+    }
+    .project-page a { text-decoration: underline; text-underline-offset: 3px; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.9rem;
+      text-decoration: none !important;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav">
+    <div class="container">
+      <a href="../index.html" class="nav__logo">&lt;bakos /&gt;</a>
+      <div class="nav__links">
+        <a href="../index.html#about"><span>01.</span> About</a>
+        <a href="../index.html#skills"><span>02.</span> Skills</a>
+        <a href="../index.html#projects"><span>03.</span> Projects</a>
+        <a href="../index.html#contact"><span>04.</span> Contact</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== CONTENT ======== -->
+  <main class="project-page">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+
+      <header class="project-page__header">
+        <p class="project-page__meta">Featured Project &middot; Data Analysis</p>
+        <h1 class="project-page__title">Unveiling Gender Disparities: A Tale of Copenhagen and Denmark</h1>
+        <p class="project-page__intro">
+          Our journey takes us through bustling streets and serene landscapes as we unravel the narrative
+          of gender disparities in income, parental leave, and education. This tale is multi-faceted,
+          touching upon income, parental leave, and education.
+        </p>
+        <p>
+          Link to <a href="https://drive.google.com/file/d/1IQJXyqPlaD76jObAv8IUAR2NdQ-Gtn1K/view?usp=sharing">explainer notebook</a>
+        </p>
+      </header>
+
+      <!-- Income Disparities -->
+      <h2>The Heart of the Matter: Income Disparities</h2>
+
+      <img src="../income_gap_comparison.png" alt="Income Gap between Genders in Copenhagen and All Denmark (2009-2021)" />
+
+      <p>
+        This line chart presents a stark contrast in the income gap between genders in Copenhagen and the
+        rest of Denmark over the years. Interestingly, the capital city appears to have a smaller income
+        gap compared to the national average, though the gap has been slowly increasing in both areas
+        over the years.
+      </p>
+      <p>Next, we zoom into the districts within Denmark, examining the disparities at a more granular level.</p>
+
+      <h3>Interactive plot of gender disparities in income in Denmark over the years</h3>
+      <iframe src="../income_interactive.html" width="100%" height="575" title="Interactive income disparity chart"></iframe>
+
+      <p>
+        This interactive plot reveals the stark disparities between male and female income across all
+        districts in Denmark. Notice the pronounced gap in wealthier districts like Gentofte, Hørsholm,
+        and Rudersdal. These areas, with their high average incomes, harbor larger gender pay gaps,
+        hinting at a trend of higher income disparities in wealthier districts.
+      </p>
+      <p>
+        As our analysis shows, income disparities between genders exist in Copenhagen as well as other
+        parts of Denmark. This observation is echoed by general insights provided by
+        <a href="https://denmark.dk/society-and-business/gender-equality">Denmark.dk</a>, which
+        acknowledges the existence of a gender pay gap in Denmark despite the country's strong performance
+        in gender equality.
+      </p>
+
+      <h3>A Geographic Perspective: Visualising Disparities Across Denmark</h3>
+      <iframe src="../income_map.html" width="100%" height="500" title="Map of income gap by area in Denmark"></iframe>
+      <p>
+        This map plot illustrates the income gap across various regions in Denmark from 2009 to 2021.
+        While the gap in some regions has remained relatively stable, in others it has fluctuated,
+        indicating that gender income disparities are widespread and vary across regions.
+      </p>
+
+      <!-- Parental Leave -->
+      <h2>Parental Leave</h2>
+
+      <p>
+        Now we want to take a dive into parental leave in Copenhagen and compare it to other locations
+        in Denmark. Also, we want to explore how parental leave could possibly correlate to education
+        and income.
+      </p>
+
+      <img src="../parental_gap_line_plot.png" alt="Development of gap in parental leave in Copenhagen compared to All Denmark" />
+
+      <p>
+        For all of Denmark the gap was bigger in 2021 than it was in 2015, while in Copenhagen it's the
+        opposite. It is interesting that the gap seems to be getting bigger in all of Denmark, since over
+        the recent years equality between genders has been a subject of many conversations.
+      </p>
+      <p>
+        Even though parental leave in Denmark is quite good, the rights between men and women were not
+        the same. Before, with children born before August 2022, women received paid leave for four weeks
+        before the birth of a child and 14 weeks after, while men received paid leave for two weeks after
+        the birth. Then the parents split up to 32 weeks of paid leave, as provided by
+        <a href="https://denmark.dk/society-and-business/equality">Denmark.dk</a>.
+      </p>
+      <p>
+        Now new rules have been accepted in Denmark for parental leave that took effect in August 2022.
+        Each parent has an earmarked 11 weeks for parental leave and these weeks cannot be shared between
+        parents. See article on the subject by
+        <a href="https://www.thelocal.dk/20211026/denmark-agrees-new-rules-for-parental-leave">thelocal.dk</a>.
+      </p>
+
+      <img src="../parental_gap_worst_cph.png" alt="Parental leave days comparison between Copenhagen, Ishøj and All Denmark" />
+
+      <p>
+        Looking at the graph for Ishøj, it's very interesting to see how the parental leave for women
+        is trending upwards.
+      </p>
+
+      <h3>Parental Leave &amp; Education</h3>
+      <img src="../parental_gap_education.png" alt="Average parental leave days for fathers compared to their education" />
+      <p>
+        Generally, fathers with higher levels of education tend to take longer parental leaves.
+      </p>
+
+      <!-- Education -->
+      <h2>Education</h2>
+
+      <img src="../masters_education.png" alt="Men and women aged 30-34 who finished masters in Copenhagen vs Denmark" />
+      <p>
+        From 2005 to 2022, there has been a steady increase in the number of individuals pursuing higher
+        education among both men and women. A noteworthy observation is the widening gender gap in
+        education, favouring women. This trend becomes especially noticeable when examining the
+        percentages, despite the income gap favouring men.
+      </p>
+
+      <img src="../gender_education2.png" alt="Education level comparison between genders in 2005 and 2022" />
+      <p>
+        Upon closer examination, regardless of gender, there has been an increase of individuals seeking
+        higher levels of education in Denmark. The categories that had a decrease were "Not Stated" and
+        "Primary Education", which is a positive indication. Every education level above "H50" has seen a
+        rise, indicating a growing trend of people seeking higher education in Denmark.
+      </p>
+      <p>
+        Based on findings from
+        <a href="https://politiken.dk/indland/uddannelse/art9287557/">Politiken</a>, the gender disparity
+        in higher education was less distinct four decades ago. The current situation shows a significant
+        increase in the disparity, favouring women.
+      </p>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>
+        Our exploration of gender disparities in income, parental leave, and education in Copenhagen and
+        Denmark has revealed important findings. We found a persistent income gap between genders, with
+        wealthier areas exhibiting larger pay gaps. Parental leave has been a crucial contributing factor,
+        as women have traditionally taken longer leaves. However, recent policy changes are working toward
+        making parental leave more equal.
+      </p>
+      <p>
+        In education, more women than men are pursuing higher degrees — yet the income gap persists.
+        Factors such as occupational choices, parental leave differences, and work patterns all contribute.
+        Although progress has been made, there is still work to be done to achieve true gender equality.
+      </p>
+
+      <div style="margin: 3rem 0;">
+        <a href="../index.html#projects" class="btn btn--outline">&larr; Back to Projects</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by Christian Bakos Leirv&aring;g</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

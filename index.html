@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian Bakos Leirv&aring;g — Portfolio</title>
+  <meta name="description" content="Portfolio of Christian Bakos Leirv&aring;g — data science, machine learning, and software engineering projects from DTU." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======== NAV ======== -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav__logo">&lt;bakos /&gt;</a>
+      <div class="nav__links">
+        <a href="#about"><span>01.</span> About</a>
+        <a href="#skills"><span>02.</span> Skills</a>
+        <a href="#projects"><span>03.</span> Projects</a>
+        <a href="#contact"><span>04.</span> Contact</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <p class="hero__greeting">Hi, my name is</p>
+      <h1 class="hero__name">Christian Bakos Leirv&aring;g.</h1>
+      <h2 class="hero__tagline">I like to build things.</h2>
+      <p class="hero__description">
+        I'm a DTU graduate with a focus on data science, machine learning,
+        and cognitive modelling. I enjoy turning complex datasets into
+        clear insights and building tools that solve real problems.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section__title" data-number="01">About Me</h2>
+      <p class="section__subtitle">A quick snapshot of who I am and what drives me.</p>
+      <div class="about__content fade-in">
+        <div class="about__text">
+          <p>
+            I studied at the <strong>Technical University of Denmark (DTU)</strong>, where
+            I worked across data science, machine learning, social network analysis,
+            and cognitive modelling. My coursework and projects gave me hands-on
+            experience turning raw data into actionable insight — from interactive
+            visualisations of societal trends to deep-learning pipelines for image
+            segmentation.
+          </p>
+          <p>
+            I'm drawn to projects with real-world impact: analysing gender disparities
+            in Denmark using public statistics, mapping music communities with graph
+            theory, and automating X-ray image segmentation with neural networks.
+          </p>
+          <p>
+            I thrive at the intersection of analytics and engineering, and I'm always
+            looking for the next interesting problem to solve.
+          </p>
+        </div>
+        <div class="about__photo-wrapper">
+          <!-- Add your photo as assets/profile.jpg -->
+          <div class="about__photo" role="img" aria-label="Profile photo placeholder">
+            Your photo here<br/>(assets/profile.jpg)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SKILLS ======== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section__title" data-number="02">Skills &amp; Tools</h2>
+      <p class="section__subtitle">Technologies and areas I work with regularly.</p>
+      <div class="skills__grid fade-in">
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128202;</div>
+          <h3 class="skill-card__title">Data Science &amp; ML</h3>
+          <ul class="skill-card__list">
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Scikit-learn</li>
+            <li>PyTorch</li>
+            <li>TensorFlow / Keras</li>
+            <li>Jupyter</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128200;</div>
+          <h3 class="skill-card__title">Visualisation &amp; Analysis</h3>
+          <ul class="skill-card__list">
+            <li>Matplotlib</li>
+            <li>Plotly</li>
+            <li>Network Analysis</li>
+            <li>Statistical Modelling</li>
+            <li>Cognitive Modelling</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128187;</div>
+          <h3 class="skill-card__title">Engineering &amp; Tools</h3>
+          <ul class="skill-card__list">
+            <li>Git / GitHub</li>
+            <li>HTML / CSS / JS</li>
+            <li>Jekyll</li>
+            <li>GitHub Pages</li>
+            <li>UNet / VGGnet</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJECTS ======== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title" data-number="03">Projects</h2>
+      <p class="section__subtitle">Highlighted work from university and personal exploration.</p>
+
+      <!-- Project 1 — Gender Disparities -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <img
+            src="income_gap_comparison.png"
+            alt="Income gap comparison chart between Copenhagen and Denmark"
+            class="project__image"
+          />
+          <div class="project__content">
+            <p class="project__label">Featured Project</p>
+            <h3 class="project__title">Gender Disparities in Denmark</h3>
+            <p class="project__description">
+              An in-depth data analysis exploring gender gaps in income, parental leave,
+              and education across Copenhagen and Denmark — featuring interactive maps,
+              time-series charts, and geographic visualisations built with Plotly.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>Plotly</li>
+              <li>GitHub Pages</li>
+            </ul>
+            <div class="project__links">
+              <a href="projects/gender-disparities.html">Read the Analysis &rarr;</a>
+              <a href="https://github.com/bakos97/bakos97.github.io" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 — Unveiling the Music Graphs -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label">Featured Project &middot; Social Graphs (02805)</p>
+            <h3 class="project__title">Unveiling the Music Graphs</h3>
+            <p class="project__description">
+              Final project for DTU's Social Graphs &amp; Interactions course. Analysed
+              Spotify data to uncover network structures between artists, users, and tracks
+              using graph theory, community detection, and interactive network visualisations.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>Jupyter</li>
+              <li>NetworkX</li>
+              <li>Spotify Data</li>
+              <li>Graph Analysis</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/bakos97/Final-project-Social-Graphs" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 — AI Image Segmentation -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label">Research Project &middot; Deep Learning</p>
+            <h3 class="project__title">Automated X-Ray Image Segmentation</h3>
+            <p class="project__description">
+              Contributed to a research project automating the segmentation of
+              ptychographic X-ray synchrotron tomographic images using deep neural
+              networks (UNet, VGGnet). The goal: replace time-consuming manual
+              segmentation with scalable, accurate models.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>PyTorch / Keras</li>
+              <li>UNet</li>
+              <li>VGGnet</li>
+              <li>Image Segmentation</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/bakos97/AIStudentProjects" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 — Cognitive Modelling of Face Perception -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label">Course Project &middot; Cognitive Science</p>
+            <h3 class="project__title">Modelling of Face Perception</h3>
+            <p class="project__description">
+              Built computational models of how humans perceive faces, using the
+              UTKFaces dataset. Collected human ratings and compared them against
+              model predictions to explore cognitive mechanisms behind face perception.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+              <li>UTKFaces</li>
+              <li>Cognitive Modelling</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/bakos97/Cognitive-Modelling-Homework-2-Modelling-of-face-perception" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 5 — Heart Failure ML -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label">Course Project &middot; Machine Learning</p>
+            <h3 class="project__title">Heart Failure Prediction</h3>
+            <p class="project__description">
+              Applied machine learning techniques to a clinical dataset of heart failure
+              records, building and evaluating predictive models for patient outcomes.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>Scikit-learn</li>
+              <li>Jupyter</li>
+              <li>Clinical Data</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/bakos97/Machine-learning-assignment-2" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section__title" data-number="04" style="justify-content:center;">Get In Touch</h2>
+      <p class="section__subtitle" style="text-align:center; margin-left:auto; margin-right:auto;">
+        I'm open to opportunities and always happy to connect.
+        Whether you have a question, a project idea, or just want to say hi — drop me a line.
+      </p>
+      <div class="contact__socials">
+        <a href="https://github.com/bakos97" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="https://linkedin.com/in/christianbakosleirvaag" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by Christian Bakos Leirv&aring;g</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
