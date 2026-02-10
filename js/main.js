@@ -76,7 +76,7 @@
   window.addEventListener('scroll', highlightNav);
 
   // =========================================================
-  // 5. SOLUTIONS CAROUSEL
+  // 5. SOLUTIONS CAROUSEL (Fixed)
   // =========================================================
   var carousel = document.getElementById('solutions-carousel');
   if (carousel) {
@@ -85,6 +85,7 @@
     var prevBtn = carousel.querySelector('.carousel__arrow--prev');
     var nextBtn = carousel.querySelector('.carousel__arrow--next');
     var dots = carousel.querySelectorAll('.carousel__dot');
+    var counter = document.getElementById('carousel-current');
     var currentSlide = 0;
     var slideCount = slides.length;
 
@@ -96,6 +97,9 @@
       dots.forEach(function (dot, i) {
         dot.classList.toggle('carousel__dot--active', i === currentSlide);
       });
+      if (counter) {
+        counter.textContent = currentSlide + 1;
+      }
     }
 
     if (prevBtn) prevBtn.addEventListener('click', function () { goToSlide(currentSlide - 1); });
@@ -107,8 +111,8 @@
     // Keyboard navigation
     carousel.setAttribute('tabindex', '0');
     carousel.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
-      if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+      if (e.key === 'ArrowLeft') { goToSlide(currentSlide - 1); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { goToSlide(currentSlide + 1); e.preventDefault(); }
     });
 
     // Touch / pointer swipe
@@ -124,23 +128,24 @@
     getSlideWidth();
     window.addEventListener('resize', getSlideWidth);
 
-    track.addEventListener('pointerdown', function (e) {
-      if (e.target.closest('a, button')) return;
+    carousel.addEventListener('pointerdown', function (e) {
+      if (e.target.closest('a, button, .carousel__arrow')) return;
       isDragging = true;
       startX = e.clientX;
       dragOffset = 0;
       track.classList.add('is-dragging');
-      track.setPointerCapture(e.pointerId);
+      carousel.setPointerCapture(e.pointerId);
+      e.preventDefault();
     });
 
-    track.addEventListener('pointermove', function (e) {
+    carousel.addEventListener('pointermove', function (e) {
       if (!isDragging) return;
       dragOffset = e.clientX - startX;
       var base = -(currentSlide * slideWidth);
       track.style.transform = 'translateX(' + (base + dragOffset) + 'px)';
     });
 
-    track.addEventListener('pointerup', function () {
+    carousel.addEventListener('pointerup', function () {
       if (!isDragging) return;
       isDragging = false;
       track.classList.remove('is-dragging');
@@ -154,13 +159,20 @@
       }
     });
 
-    track.addEventListener('pointercancel', function () {
+    carousel.addEventListener('pointercancel', function () {
       isDragging = false;
       track.classList.remove('is-dragging');
       goToSlide(currentSlide);
     });
 
     track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    // Auto-advance every 6 seconds (pauses on hover)
+    var autoPlay = setInterval(function () { goToSlide(currentSlide + 1); }, 6000);
+    carousel.addEventListener('pointerenter', function () { clearInterval(autoPlay); });
+    carousel.addEventListener('pointerleave', function () {
+      autoPlay = setInterval(function () { goToSlide(currentSlide + 1); }, 6000);
+    });
   }
 
   // =========================================================
