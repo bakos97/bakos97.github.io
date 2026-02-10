@@ -356,123 +356,78 @@ body::after {
   user-select: none;
 }
 
-/* ---------- Skills ---------- */
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.skill-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-  backdrop-filter: blur(8px);
-  position: relative;
-  overflow: hidden;
-}
-.skill-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-pink), var(--color-cyan), var(--color-purple));
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-.skill-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-purple);
-  box-shadow: var(--glow-purple);
-}
-.skill-card:hover::before { opacity: 1; }
-.skill-card__icon {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  filter: saturate(1.5);
-}
-.skill-card__title {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--color-heading);
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-}
-.skill-card__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.skill-card__list li {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--color-cyan);
-  background: rgba(1, 205, 254, 0.08);
-  padding: 0.3rem 0.75rem;
-  border-radius: 50px;
-  border: 1px solid rgba(1, 205, 254, 0.2);
-  transition: var(--transition);
-}
-.skill-card__list li:hover {
-  background: rgba(1, 205, 254, 0.15);
-  border-color: var(--color-cyan);
-  text-shadow: var(--glow-cyan);
-}
-
-/* ---------- Projects ---------- */
-.project {
+/* ============================================
+   SOLUTIONS — Featured showcases
+   ============================================ */
+.solution {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   transition: border-color var(--transition), box-shadow var(--transition);
   backdrop-filter: blur(8px);
 }
-.project:hover {
+.solution:hover {
   border-color: var(--color-pink);
-  box-shadow: 0 0 30px rgba(255, 113, 206, 0.1);
+  box-shadow: 0 0 40px rgba(255, 113, 206, 0.1), 0 0 80px rgba(185, 103, 255, 0.05);
 }
-.project__inner { display: grid; grid-template-columns: 1fr 1fr; }
-.project__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  min-height: 280px;
-  background: var(--color-bg-alt);
+
+/* Solution header with number + title */
+.solution__header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem 2.5rem 0;
 }
-.project__content { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
-.project__label {
+.solution__number {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--color-pink);
   text-shadow: var(--glow-pink);
-  margin-bottom: 0.5rem;
+  line-height: 1;
+  opacity: 0.4;
+}
+.solution__label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-cyan);
+  text-shadow: var(--glow-cyan);
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 0.25rem;
 }
-.project__title {
+.solution__title {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--color-heading);
-  margin-bottom: 1rem;
   font-weight: 700;
 }
-.project__description {
-  color: var(--color-text-muted);
-  margin-bottom: 1.25rem;
-  font-size: 0.88rem;
+
+/* Solution body — description + sidebar */
+.solution__body {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+  padding: 1.5rem 2.5rem 2.5rem;
 }
-.project__tech {
+.solution__description p {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.solution__description p strong {
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+.solution__tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
-.project__tech li {
+.solution__tech li {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--color-yellow);
@@ -481,15 +436,215 @@ body::after {
   border-radius: 4px;
   border: 1px solid rgba(255, 251, 150, 0.15);
 }
-.project__links { display: flex; gap: 1rem; }
-.project__links a {
-  font-size: 0.8rem;
+.solution__links { display: flex; gap: 1rem; }
+.solution__links a {
+  font-size: 0.85rem;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--color-cyan);
+  border-radius: var(--radius);
   transition: var(--transition);
 }
-.project__links a:hover {
+.solution__links a:hover {
+  background: var(--color-cyan);
+  color: var(--color-bg);
+  box-shadow: var(--glow-cyan);
+}
+
+/* Stats sidebar (D&D solution) */
+.solution__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: center;
+}
+.stat {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: rgba(255, 113, 206, 0.05);
+  border: 1px solid rgba(255, 113, 206, 0.15);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.stat:hover {
+  border-color: var(--color-pink);
+  box-shadow: var(--glow-pink);
+}
+.stat__number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-pink);
+  text-shadow: var(--glow-pink);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.stat__number.highlight-fast {
+  font-size: 1.4rem;
+  background: linear-gradient(135deg, var(--color-cyan), var(--color-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+.stat__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Highlight cards sidebar (Employee solution) */
+.solution__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-self: center;
+}
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(1, 205, 254, 0.05);
+  border: 1px solid rgba(1, 205, 254, 0.15);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+.highlight-card:hover {
+  border-color: var(--color-cyan);
+  box-shadow: var(--glow-cyan);
+}
+.highlight-card__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+.highlight-card__text {
+  font-size: 0.78rem;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+/* Feature items sidebar (Habit Tracker solution) */
+.solution__features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-self: center;
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(185, 103, 255, 0.05);
+  border: 1px solid rgba(185, 103, 255, 0.15);
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  transition: var(--transition);
+}
+.feature-item:hover {
+  border-color: var(--color-purple);
+  box-shadow: var(--glow-purple);
+}
+.feature-item__label {
+  color: var(--color-text);
+  white-space: nowrap;
+}
+.feature-item__arrow {
+  color: var(--color-text-muted);
+}
+.feature-item__result {
+  color: var(--color-purple);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.feature-item__result--penalty {
+  color: var(--color-hot-pink);
+}
+.feature-item__result--reward {
+  color: var(--color-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+/* ============================================
+   OTHER PROJECTS — Compact grid cards
+   ============================================ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-purple);
+  box-shadow: var(--glow-purple);
+}
+.project-card__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-pink);
+  text-shadow: var(--glow-pink);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-heading);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.project-card__description {
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+  flex: 1;
+}
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.project-card__tech li {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-yellow);
+  background: rgba(255, 251, 150, 0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 251, 150, 0.15);
+}
+.project-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+.project-card__links a {
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: var(--transition);
+}
+.project-card__links a:hover {
   text-shadow: var(--glow-cyan);
 }
 
@@ -618,8 +773,25 @@ body::after {
   .nav__toggle { display: block; }
   .about__content { grid-template-columns: 1fr; }
   .about__photo-wrapper { max-width: 300px; margin: 0 auto; }
-  .project__inner { grid-template-columns: 1fr; }
-  .project__image { min-height: 200px; }
   .hero__cta { flex-direction: column; }
   .code-float { display: none; }
+
+  /* Solutions responsive */
+  .solution__header { padding: 1.5rem 1.5rem 0; }
+  .solution__body {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+  .solution__stats,
+  .solution__highlights,
+  .solution__features {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .stat { flex: 1; min-width: 90px; }
+  .highlight-card { flex: 1 1 calc(50% - 0.5rem); }
+  .feature-item { flex: 1 1 calc(50% - 0.5rem); }
+
+  /* Projects grid responsive */
+  .projects-grid { grid-template-columns: 1fr; }
 }
