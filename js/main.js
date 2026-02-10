@@ -150,9 +150,9 @@
     var lines = [
       '> whoami',
       'christian_bakos_leirvaag',
-      '> cat interests.txt',
-      'data science, ML, vaporwave, code',
-      '> ./portfolio --start'
+      '> cat stack.txt',
+      'next.js, typescript, postgres, AI agents',
+      '> npm run ship'
     ];
     var lineIndex = 0;
     var charIndex = 0;

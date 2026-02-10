@@ -45,6 +45,20 @@ like stepping into a neon-lit terminal from the future.
 - Deploy: push to `main` branch; GitHub Pages serves automatically
 - No build tools, bundlers, or package managers needed
 
+## Current Targeting: Native.no — Founding Engineer
+The portfolio is currently tailored for the Founding Engineer role at Native (native.no),
+an autonomous AI for social media (a16z Scout Fund backed, 35M NOK valuation pre-launch).
+
+### Key alignment points surfaced in the portfolio:
+- **Fullstack from scratch** — Shipped web apps on Fly.io are shown first
+- **Their exact stack** — Next.js, TypeScript, PostgreSQL, GCP, Vertex AI in skills
+- **AI agents / LLMs** — Prominent in skills, floating code snippets, hero description
+- **AI-native workflow** — Cursor + Claude Code called out in About and Skills
+- **Pragmatic shipper** — Tagline "I build products & ship fast", project labels say "Shipped"
+- **Startup-ready** — Contact says "early-stage team building something ambitious"
+- **Web scraping / data at scale** — Spotify/Music Graphs project reframed for this
+- **Social media / content interest** — Floating code snippets reference AI agents for publishing
+
 ## Conventions
 - Keep pages lightweight and fast-loading (canvas should be performant)
 - Mobile-first responsive design (canvas effects can be simplified on mobile)

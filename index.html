@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian Bakos Leirv&aring;g — Portfolio</title>
-  <meta name="description" content="Portfolio of Christian Bakos Leirv&aring;g — data science, machine learning, and software engineering projects from DTU." />
+  <meta name="description" content="Portfolio of Christian Bakos Leirv&aring;g — fullstack engineer, AI builder, and pragmatic shipper." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
@@ -21,7 +21,7 @@
       <a href="#" class="nav__logo">&gt; bakos_</a>
       <div class="nav__links">
         <a href="#about"><span>01.</span> About</a>
-        <a href="#skills"><span>02.</span> Skills</a>
+        <a href="#skills"><span>02.</span> Stack</a>
         <a href="#projects"><span>03.</span> Projects</a>
         <a href="#contact"><span>04.</span> Contact</a>
       </div>
@@ -41,29 +41,31 @@
         <span class="glitch highlight" data-text="Christian">Christian</span><br/>
         <span class="glitch highlight" data-text="Bakos Leirv&aring;g.">Bakos Leirv&aring;g.</span>
       </h1>
-      <h2 class="hero__tagline">I build things &amp; break data.</h2>
+      <h2 class="hero__tagline">I build products &amp; ship fast.</h2>
       <p class="hero__description">
-        DTU graduate turning complex datasets into clear insights and building
-        tools that solve real problems. Data science, machine learning, and
-        cognitive modelling — with a vaporwave soul.
+        Fullstack engineer with a background in AI and data science.
+        I build web apps from scratch, work with LLMs and AI agents,
+        and use tools like Cursor and Claude Code daily. I ship things
+        that work — then iterate.
       </p>
       <div class="hero__cta">
-        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#projects" class="btn btn--primary">See What I've Built</a>
         <a href="#contact" class="btn btn--outline">Get In Touch</a>
       </div>
     </div>
 
     <!-- Floating code snippets (decorative) -->
     <div class="code-float" style="top: 15%; right: 8%;" aria-hidden="true">
-import numpy as np
-model.fit(X_train)
-predictions = model
-  .predict(X_test)</div>
+const agent = new AIAgent({
+  model: 'claude-opus',
+  tools: [research,
+    generate, publish],
+})</div>
     <div class="code-float" style="bottom: 20%; right: 5%;" aria-hidden="true">
-def analyze(data):
-  return data
-    .groupby('year')
-    .mean()</div>
+await db.company.create({
+  channels: platforms,
+  schedule: 'autonomous',
+})</div>
   </section>
 
   <div class="neon-divider"></div>
@@ -72,25 +74,26 @@ def analyze(data):
   <section class="section" id="about">
     <div class="container">
       <h2 class="section__title" data-number="01">About Me</h2>
-      <p class="section__subtitle">// who I am and what drives me</p>
+      <p class="section__subtitle">// the short version</p>
       <div class="about__content fade-in">
         <div class="about__text">
           <p>
-            I studied at the <strong>Technical University of Denmark (DTU)</strong>, where
-            I worked across data science, machine learning, social network analysis,
-            and cognitive modelling. My coursework and projects gave me hands-on
-            experience turning raw data into actionable insight — from interactive
-            visualisations of societal trends to deep-learning pipelines for image
-            segmentation.
+            I'm a fullstack engineer who builds and ships products end-to-end.
+            I've launched multiple web apps from zero — handling everything from
+            database design to deployment on <strong>Fly.io</strong> and cloud
+            infrastructure.
           </p>
           <p>
-            I'm drawn to projects with real-world impact: analysing gender disparities
-            in Denmark using public statistics, mapping music communities with graph
-            theory, and automating X-ray image segmentation with neural networks.
+            My background is from <strong>DTU (Technical University of Denmark)</strong>,
+            where I studied data science, machine learning, and cognitive modelling.
+            That gave me deep experience with AI/ML pipelines — from training neural
+            networks to building data-driven systems that produce real results.
           </p>
           <p>
-            I thrive at the intersection of analytics and engineering, and I'm always
-            looking for the next interesting problem to solve.
+            I use <strong>AI tools daily</strong> — Cursor, Claude Code, and LLM APIs
+            are core parts of my workflow. I'm pragmatic: I find solutions with what's
+            available and I ship. I thrive in small teams where things move fast and
+            everyone owns what they build.
           </p>
         </div>
         <div class="about__photo-wrapper">
@@ -105,48 +108,51 @@ def analyze(data):
 
   <div class="neon-divider"></div>
 
-  <!-- ======== SKILLS ======== -->
+  <!-- ======== SKILLS / STACK ======== -->
   <section class="section" id="skills">
     <div class="container">
-      <h2 class="section__title" data-number="02">Skills &amp; Tools</h2>
-      <p class="section__subtitle">// technologies I work with regularly</p>
+      <h2 class="section__title" data-number="02">Stack &amp; Tools</h2>
+      <p class="section__subtitle">// what I build with</p>
       <div class="skills__grid fade-in">
 
         <div class="skill-card">
-          <div class="skill-card__icon">&#128202;</div>
-          <h3 class="skill-card__title">Data Science &amp; ML</h3>
+          <div class="skill-card__icon">&#9881;&#65039;</div>
+          <h3 class="skill-card__title">Fullstack &amp; Web</h3>
           <ul class="skill-card__list">
-            <li>Python</li>
-            <li>Pandas</li>
-            <li>NumPy</li>
-            <li>Scikit-learn</li>
-            <li>PyTorch</li>
-            <li>TensorFlow / Keras</li>
-            <li>Jupyter</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-card__icon">&#128200;</div>
-          <h3 class="skill-card__title">Visualisation &amp; Analysis</h3>
-          <ul class="skill-card__list">
-            <li>Matplotlib</li>
-            <li>Plotly</li>
-            <li>Network Analysis</li>
-            <li>Statistical Modelling</li>
-            <li>Cognitive Modelling</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-card__icon">&#128187;</div>
-          <h3 class="skill-card__title">Engineering &amp; Tools</h3>
-          <ul class="skill-card__list">
-            <li>Git / GitHub</li>
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>PostgreSQL</li>
             <li>HTML / CSS / JS</li>
-            <li>GitHub Pages</li>
-            <li>UNet / VGGnet</li>
             <li>Fly.io</li>
+            <li>GCP</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#129302;</div>
+          <h3 class="skill-card__title">AI &amp; Machine Learning</h3>
+          <ul class="skill-card__list">
+            <li>LLMs / AI Agents</li>
+            <li>Python</li>
+            <li>PyTorch</li>
+            <li>Vertex AI</li>
+            <li>TensorFlow / Keras</li>
+            <li>Scikit-learn</li>
+            <li>Pandas / NumPy</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card__icon">&#128736;&#65039;</div>
+          <h3 class="skill-card__title">Tools &amp; Workflow</h3>
+          <ul class="skill-card__list">
+            <li>Cursor</li>
+            <li>Claude Code</li>
+            <li>Git / GitHub</li>
+            <li>Jupyter</li>
+            <li>Plotly</li>
+            <li>Web Scraping</li>
           </ul>
         </div>
 
@@ -160,46 +166,22 @@ def analyze(data):
   <section class="section" id="projects">
     <div class="container">
       <h2 class="section__title" data-number="03">Projects</h2>
-      <p class="section__subtitle">// highlighted work from university and personal exploration</p>
+      <p class="section__subtitle">// things I've built and shipped</p>
 
-      <!-- Project 1 — Gender Disparities -->
-      <article class="project fade-in">
-        <div class="project__inner">
-          <img
-            src="income_gap_comparison.png"
-            alt="Income gap comparison chart between Copenhagen and Denmark"
-            class="project__image"
-          />
-          <div class="project__content">
-            <p class="project__label">Featured Project</p>
-            <h3 class="project__title">Gender Disparities in Denmark</h3>
-            <p class="project__description">
-              An in-depth data analysis exploring gender gaps in income, parental leave,
-              and education across Copenhagen and Denmark — featuring interactive maps,
-              time-series charts, and geographic visualisations built with Plotly.
-            </p>
-            <ul class="project__tech">
-              <li>Python</li>
-              <li>Pandas</li>
-              <li>Plotly</li>
-              <li>GitHub Pages</li>
-            </ul>
-            <div class="project__links">
-              <a href="projects/gender-disparities.html">Read the Analysis &rarr;</a>
-              <a href="https://github.com/bakos97/bakos97.github.io" target="_blank" rel="noopener">GitHub &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 2 — D&D Creator -->
+      <!-- Project — D&D Creator -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Web App</p>
+            <p class="project__label">Shipped &middot; Web App</p>
             <h3 class="project__title">D&amp;D Creator</h3>
-            <p class="project__description"></p>
-            <ul class="project__tech"></ul>
+            <p class="project__description">
+              A full-featured web app for creating and managing Dungeons &amp; Dragons
+              characters and campaigns. Built from scratch and deployed live on Fly.io.
+            </p>
+            <ul class="project__tech">
+              <li>Fullstack</li>
+              <li>Fly.io</li>
+            </ul>
             <div class="project__links">
               <a href="https://dnd-creator.fly.dev" target="_blank" rel="noopener">Live Site &rarr;</a>
             </div>
@@ -207,14 +189,20 @@ def analyze(data):
         </div>
       </article>
 
-      <!-- Project 3 — Employee Gifting MVP -->
+      <!-- Project — Employee Gifting MVP -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Web App</p>
+            <p class="project__label">Shipped &middot; MVP</p>
             <h3 class="project__title">Employee Gifting MVP</h3>
-            <p class="project__description"></p>
-            <ul class="project__tech"></ul>
+            <p class="project__description">
+              An MVP for automating employee gifting workflows. Designed and built
+              end-to-end as a solo project — from concept to live deployment.
+            </p>
+            <ul class="project__tech">
+              <li>Fullstack</li>
+              <li>Fly.io</li>
+            </ul>
             <div class="project__links">
               <a href="https://employee-gifting-mvp.fly.dev" target="_blank" rel="noopener">Live Site &rarr;</a>
             </div>
@@ -222,14 +210,20 @@ def analyze(data):
         </div>
       </article>
 
-      <!-- Project 4 — Randaberg Sauna -->
+      <!-- Project — Randaberg Sauna -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Web App</p>
+            <p class="project__label">Shipped &middot; Web App</p>
             <h3 class="project__title">Randaberg Sauna</h3>
-            <p class="project__description"></p>
-            <ul class="project__tech"></ul>
+            <p class="project__description">
+              A booking and info platform for a local sauna business.
+              Built and deployed as a real-world product serving actual users.
+            </p>
+            <ul class="project__tech">
+              <li>Fullstack</li>
+              <li>Fly.io</li>
+            </ul>
             <div class="project__links">
               <a href="https://randaberg-sauna.fly.dev" target="_blank" rel="noopener">Live Site &rarr;</a>
             </div>
@@ -237,14 +231,20 @@ def analyze(data):
         </div>
       </article>
 
-      <!-- Project 5 — Monica Christmas Gift -->
+      <!-- Project — Monica Christmas Gift -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Web App</p>
+            <p class="project__label">Shipped &middot; Web App</p>
             <h3 class="project__title">Monica Christmas Gift</h3>
-            <p class="project__description"></p>
-            <ul class="project__tech"></ul>
+            <p class="project__description">
+              A personalised web experience built as a creative gift — designed
+              to surprise and delight. Demonstrates fast prototyping and shipping.
+            </p>
+            <ul class="project__tech">
+              <li>Fullstack</li>
+              <li>Fly.io</li>
+            </ul>
             <div class="project__links">
               <a href="https://monica-christmas-gift-25.fly.dev" target="_blank" rel="noopener">Live Site &rarr;</a>
             </div>
@@ -252,42 +252,16 @@ def analyze(data):
         </div>
       </article>
 
-      <!-- Project 6 — Unveiling the Music Graphs -->
+      <!-- Project — AI Image Segmentation -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Featured Project &middot; Social Graphs (02805)</p>
-            <h3 class="project__title">Unveiling the Music Graphs</h3>
-            <p class="project__description">
-              Final project for DTU's Social Graphs &amp; Interactions course. Analysed
-              Spotify data to uncover network structures between artists, users, and tracks
-              using graph theory, community detection, and interactive network visualisations.
-            </p>
-            <ul class="project__tech">
-              <li>Python</li>
-              <li>Jupyter</li>
-              <li>NetworkX</li>
-              <li>Spotify Data</li>
-              <li>Graph Analysis</li>
-            </ul>
-            <div class="project__links">
-              <a href="https://github.com/bakos97/Final-project-Social-Graphs" target="_blank" rel="noopener">GitHub &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Project 7 — AI Image Segmentation -->
-      <article class="project fade-in">
-        <div class="project__inner">
-          <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Research Project &middot; Deep Learning</p>
+            <p class="project__label">AI / Deep Learning</p>
             <h3 class="project__title">Automated X-Ray Image Segmentation</h3>
             <p class="project__description">
-              Contributed to a research project automating the segmentation of
-              ptychographic X-ray synchrotron tomographic images using deep neural
-              networks (UNet, VGGnet). The goal: replace time-consuming manual
-              segmentation with scalable, accurate models.
+              Built deep learning pipelines (UNet, VGGnet) to automate the
+              segmentation of X-ray synchrotron images — replacing manual
+              workflows with scalable, accurate AI models.
             </p>
             <ul class="project__tech">
               <li>Python</li>
@@ -303,16 +277,96 @@ def analyze(data):
         </div>
       </article>
 
-      <!-- Project 8 — Cognitive Modelling of Face Perception -->
+      <!-- Project — Music Graphs / Social Network Analysis -->
       <article class="project fade-in">
         <div class="project__inner">
           <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Course Project &middot; Cognitive Science</p>
+            <p class="project__label">Data &middot; Social Graphs (02805)</p>
+            <h3 class="project__title">Unveiling the Music Graphs</h3>
+            <p class="project__description">
+              Analysed Spotify data at scale to uncover network structures between
+              artists, users, and tracks — using graph theory, community detection,
+              and interactive visualisations. Demonstrates working with large datasets,
+              APIs, and web scraping.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>NetworkX</li>
+              <li>Spotify API</li>
+              <li>Data Scraping</li>
+              <li>Graph Analysis</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/bakos97/Final-project-Social-Graphs" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Gender Disparities -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <img
+            src="income_gap_comparison.png"
+            alt="Income gap comparison chart between Copenhagen and Denmark"
+            class="project__image"
+          />
+          <div class="project__content">
+            <p class="project__label">Data Analysis &middot; Interactive</p>
+            <h3 class="project__title">Gender Disparities in Denmark</h3>
+            <p class="project__description">
+              In-depth data analysis of gender gaps in income, parental leave,
+              and education — with interactive maps and time-series visualisations.
+              Published as a standalone web experience.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>Plotly</li>
+              <li>GitHub Pages</li>
+            </ul>
+            <div class="project__links">
+              <a href="projects/gender-disparities.html">Read the Analysis &rarr;</a>
+              <a href="https://github.com/bakos97/bakos97.github.io" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Heart Failure Prediction -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label">Machine Learning</p>
+            <h3 class="project__title">Heart Failure Prediction</h3>
+            <p class="project__description">
+              Built and evaluated ML models for predicting patient outcomes from
+              clinical heart failure data. End-to-end pipeline from feature
+              engineering to model comparison.
+            </p>
+            <ul class="project__tech">
+              <li>Python</li>
+              <li>Scikit-learn</li>
+              <li>Jupyter</li>
+              <li>Clinical Data</li>
+            </ul>
+            <div class="project__links">
+              <a href="https://github.com/bakos97/Machine-learning-assignment-2" target="_blank" rel="noopener">GitHub &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project — Cognitive Modelling -->
+      <article class="project fade-in">
+        <div class="project__inner">
+          <div class="project__content" style="grid-column: 1 / -1;">
+            <p class="project__label">Cognitive Science</p>
             <h3 class="project__title">Modelling of Face Perception</h3>
             <p class="project__description">
-              Built computational models of how humans perceive faces, using the
-              UTKFaces dataset. Collected human ratings and compared them against
-              model predictions to explore cognitive mechanisms behind face perception.
+              Built computational models of how humans perceive faces. Collected
+              human ratings and compared against model predictions — bridging
+              AI and cognitive science.
             </p>
             <ul class="project__tech">
               <li>Python</li>
@@ -328,29 +382,6 @@ def analyze(data):
         </div>
       </article>
 
-      <!-- Project 9 — Heart Failure ML -->
-      <article class="project fade-in">
-        <div class="project__inner">
-          <div class="project__content" style="grid-column: 1 / -1;">
-            <p class="project__label">Course Project &middot; Machine Learning</p>
-            <h3 class="project__title">Heart Failure Prediction</h3>
-            <p class="project__description">
-              Applied machine learning techniques to a clinical dataset of heart failure
-              records, building and evaluating predictive models for patient outcomes.
-            </p>
-            <ul class="project__tech">
-              <li>Python</li>
-              <li>Scikit-learn</li>
-              <li>Jupyter</li>
-              <li>Clinical Data</li>
-            </ul>
-            <div class="project__links">
-              <a href="https://github.com/bakos97/Machine-learning-assignment-2" target="_blank" rel="noopener">GitHub &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
     </div>
   </section>
 
@@ -361,8 +392,8 @@ def analyze(data):
     <div class="container">
       <h2 class="section__title" data-number="04">Get In Touch</h2>
       <p class="section__subtitle">
-        I'm open to opportunities and always happy to connect.
-        Whether you have a question, a project idea, or just want to say hi — drop me a line.
+        I'm looking for my next challenge — ideally at an early-stage team
+        building something ambitious. If that sounds like you, let's talk.
       </p>
       <div class="contact__socials">
         <a href="https://github.com/bakos97" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
