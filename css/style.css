@@ -22,6 +22,7 @@
   --font-mono: 'Fira Code', monospace;
 
   --max-width: 960px;
+  --max-width-wide: 1100px;
   --radius: 12px;
   --radius-sm: 6px;
   --transition: 0.2s ease;
@@ -47,6 +48,7 @@ strong { color: var(--color-heading); font-weight: 600; }
 
 /* ---------- Layout ---------- */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.25rem; }
+.container--wide { max-width: var(--max-width-wide); }
 .section { padding: 5rem 0; }
 .section--alt { background: var(--color-bg-alt); }
 .section__title {
@@ -233,11 +235,11 @@ strong { color: var(--color-heading); font-weight: 600; }
   gap: 0.85rem;
   padding: 1rem;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   transition: border-color var(--transition);
 }
-.trait:hover { border-color: var(--color-border-hover); }
+.trait:hover { border-color: rgba(99, 102, 241, 0.3); }
 .trait__icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.4; }
 .trait__title {
   font-size: 0.9rem;
@@ -253,10 +255,10 @@ strong { color: var(--color-heading); font-weight: 600; }
 .showcase {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  gap: 0;
+  align-items: stretch;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 2rem;
@@ -264,18 +266,17 @@ strong { color: var(--color-heading); font-weight: 600; }
 }
 .showcase:last-child { margin-bottom: 0; }
 .showcase:hover {
-  border-color: rgba(99, 102, 241, 0.25);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
 }
-.showcase--reverse { direction: rtl; }
-.showcase--reverse > * { direction: ltr; }
+.showcase--reverse .showcase__preview { order: 2; }
+.showcase--reverse .showcase__info { order: 1; }
 
 /* Browser frame */
 .showcase__preview {
   position: relative;
   background: #0a0a12;
-  height: 100%;
-  min-height: 360px;
+  min-height: 380px;
 }
 .showcase__browser {
   height: 100%;
@@ -392,10 +393,7 @@ strong { color: var(--color-heading); font-weight: 600; }
 
 /* Showcase info panel */
 .showcase__info {
-  padding: 2rem 2rem 2rem 0;
-}
-.showcase--reverse .showcase__info {
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 2.25rem;
 }
 .showcase__badges {
   display: flex;
@@ -532,12 +530,12 @@ strong { color: var(--color-heading); font-weight: 600; }
    ============================================ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.25rem;
 }
 .project-card {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), opacity var(--transition);
@@ -547,9 +545,9 @@ strong { color: var(--color-heading); font-weight: 600; }
   user-select: none;
 }
 .project-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-hover);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
 }
 .project-card.is-dragging {
   opacity: 0.35;
@@ -680,9 +678,9 @@ strong { color: var(--color-heading); font-weight: 600; }
   /* Showcases stack on mobile */
   .showcase {
     grid-template-columns: 1fr;
-    gap: 0;
   }
-  .showcase--reverse { direction: ltr; }
+  .showcase--reverse .showcase__preview { order: 0; }
+  .showcase--reverse .showcase__info { order: 0; }
   .showcase__preview { min-height: 240px; }
   .showcase__iframe { min-height: 220px; }
   .showcase__info {
