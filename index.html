@@ -3,27 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Bakos Leirv&aring;g — Portfolio</title>
-  <meta name="description" content="Portfolio of Christian Bakos Leirv&aring;g — building real solutions people actually use. D&amp;D character builder, employee recognition platform, and more." />
+  <title>Christian Bakos Leirv&aring;g — Fullstack Developer</title>
+  <meta name="description" content="Christian Bakos Leirv&aring;g — fullstack developer who builds and ships real products. D&amp;D character builder, employee recognition platform, habit tracker app." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ======== CANVAS BACKGROUND ======== -->
-  <canvas id="vaporwave-bg" aria-hidden="true"></canvas>
-
   <!-- ======== NAV ======== -->
   <nav class="nav">
     <div class="container">
-      <a href="#" class="nav__logo">&gt; bakos_</a>
+      <a href="#" class="nav__logo">christian<span>.</span></a>
       <div class="nav__links">
-        <a href="#about"><span>01.</span> About</a>
-        <a href="#solutions"><span>02.</span> Solutions</a>
-        <a href="#projects"><span>03.</span> Projects</a>
-        <a href="#contact"><span>04.</span> Contact</a>
+        <a href="#about">About</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
       <button class="nav__toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -34,276 +31,244 @@
   <!-- ======== HERO ======== -->
   <section class="hero" id="hero">
     <div class="container">
-      <p class="hero__terminal">
-        <span id="typed-prompt"></span><span class="cursor"></span>
-      </p>
-      <h1 class="hero__name">
-        <span class="glitch highlight" data-text="Christian">Christian</span><br/>
-        <span class="glitch highlight" data-text="Bakos Leirv&aring;g.">Bakos Leirv&aring;g.</span>
-      </h1>
-      <h2 class="hero__tagline">I build solutions people actually use.</h2>
+      <div class="hero__badge">Available for founding roles</div>
+      <h1 class="hero__name">Christian Bakos Leirv&aring;g</h1>
+      <h2 class="hero__tagline">I build and ship products people actually use.</h2>
       <p class="hero__description">
-        DTU graduate who turns ideas into real products — from D&amp;D character
-        builders used by 20+ players, to platforms that help companies retain
-        their people. I ship things, test them, and iterate.
+        Fullstack developer with a background in data science and ML from DTU.
+        I've built web apps, mobile apps, and SaaS MVPs from scratch &mdash; tested
+        with real users, iterated on feedback, and deployed to production. I use
+        Claude Code and Cursor daily.
       </p>
       <div class="hero__cta">
-        <a href="#solutions" class="btn btn--primary">See My Solutions</a>
-        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+        <a href="#solutions" class="btn btn--primary">See what I've built</a>
+        <a href="#contact" class="btn btn--outline">Get in touch</a>
+      </div>
+      <div class="hero__stack">
+        <span>Next.js</span>
+        <span>TypeScript</span>
+        <span>React Native</span>
+        <span>Python</span>
+        <span>PostgreSQL</span>
+        <span>GCP</span>
+        <span>AI/LLMs</span>
+        <span>Fly.io</span>
       </div>
     </div>
-
-    <!-- Floating code snippets (decorative) -->
-    <div class="code-float" style="top: 15%; right: 8%;" aria-hidden="true">
-const character = new
-  DnDBuilder()
-character.roll()
-character.equip(gear)</div>
-    <div class="code-float" style="bottom: 20%; right: 5%;" aria-hidden="true">
-async function celebrate
-  (employee) {
-  await gather(messages)
-  return buildPage(employee)
-}</div>
   </section>
-
-  <div class="neon-divider"></div>
 
   <!-- ======== ABOUT ======== -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section__title" data-number="01">About Me</h2>
-      <p class="section__subtitle">// who I am and what drives me</p>
+      <h2 class="section__title">About me</h2>
       <div class="about__content fade-in">
         <div class="about__text">
           <p>
-            I studied at the <strong>Technical University of Denmark (DTU)</strong>, where
-            I built a foundation in data science, machine learning, and software engineering.
-            But what really drives me is <strong>building things people use</strong>.
+            I studied at the <strong>Technical University of Denmark (DTU)</strong>,
+            where I built a foundation in data science, machine learning, and
+            software engineering. But what drives me is
+            <strong>shipping things that work</strong>.
           </p>
           <p>
-            I've shipped multiple products — from web apps with active users, to mobile
-            apps I use daily, to platforms designed for real business problems. Each
-            solution has been tested with real users, iterated on based on feedback,
-            and refined until it works.
+            I've launched multiple products from scratch &mdash; web apps with active
+            users, a React Native app I use daily, and SaaS MVPs built for real
+            business problems. Every solution has been through user testing,
+            feedback cycles, and iteration.
           </p>
           <p>
-            I care about the full loop: identifying a problem, building a solution,
-            putting it in front of people, and making it better based on what they tell me.
+            I work with <strong>AI tools daily</strong> &mdash; Claude Code and Cursor
+            are part of my workflow. I'm pragmatic: I find solutions with what I have
+            and ship. I thrive in small teams where decisions become product fast.
           </p>
         </div>
-        <div class="about__photo-wrapper">
-          <!-- Add your photo as assets/profile.jpg -->
-          <div class="about__photo" role="img" aria-label="Profile photo placeholder">
-            Your photo here<br/>(assets/profile.jpg)
+        <div class="about__traits">
+          <div class="trait">
+            <div class="trait__icon">&#9889;</div>
+            <div>
+              <h3 class="trait__title">Ship fast</h3>
+              <p class="trait__text">From idea to production. No overengineering.</p>
+            </div>
+          </div>
+          <div class="trait">
+            <div class="trait__icon">&#128736;</div>
+            <div>
+              <h3 class="trait__title">Fullstack</h3>
+              <p class="trait__text">Frontend, backend, infra, deploy. The whole loop.</p>
+            </div>
+          </div>
+          <div class="trait">
+            <div class="trait__icon">&#129302;</div>
+            <div>
+              <h3 class="trait__title">AI-native</h3>
+              <p class="trait__text">Claude Code &amp; Cursor daily. LLM integrations.</p>
+            </div>
+          </div>
+          <div class="trait">
+            <div class="trait__icon">&#128101;</div>
+            <div>
+              <h3 class="trait__title">User-tested</h3>
+              <p class="trait__text">Every product tested with real people, iterated.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="neon-divider"></div>
-
   <!-- ======== SOLUTIONS ======== -->
-  <section class="section" id="solutions">
+  <section class="section section--alt" id="solutions">
     <div class="container">
-      <h2 class="section__title" data-number="02">Solutions</h2>
-      <p class="section__subtitle">// real products, real users, real impact &mdash; swipe or use arrows</p>
+      <h2 class="section__title">Solutions I've built</h2>
+      <p class="section__subtitle">Real products, real users, real impact. Swipe or use arrows.</p>
 
       <!-- Carousel -->
       <div class="carousel fade-in" id="solutions-carousel">
         <div class="carousel__viewport">
           <div class="carousel__track">
 
-            <!-- Slide 1 — D&D Character Builder -->
+            <!-- Slide 1 -->
             <article class="carousel__slide solution">
-              <div class="solution__header">
-                <div class="solution__number">01</div>
-                <div>
-                  <p class="solution__label">Web App &middot; 7 Iterations</p>
-                  <h3 class="solution__title">D&amp;D Character Builder</h3>
+              <div class="solution__top">
+                <span class="solution__badge">Web App</span>
+                <span class="solution__badge solution__badge--accent">7 iterations</span>
+              </div>
+              <h3 class="solution__title">D&amp;D Character Builder</h3>
+              <p class="solution__description">
+                A streamlined tool for creating Dungeons &amp; Dragons characters.
+                Built because existing tools were slow and clunky. Through
+                <strong>7 iterations</strong> and testing with <strong>20+ users</strong>,
+                it's been refined into a fast, intuitive experience that outperforms alternatives.
+              </p>
+              <p class="solution__description">
+                Actively used by my friend group for every new campaign. User testing
+                consistently shows it's faster than other tools on the market.
+              </p>
+              <div class="solution__stats">
+                <div class="stat">
+                  <span class="stat__number">7</span>
+                  <span class="stat__label">Iterations</span>
+                </div>
+                <div class="stat">
+                  <span class="stat__number">20+</span>
+                  <span class="stat__label">Users tested</span>
+                </div>
+                <div class="stat stat--highlight">
+                  <span class="stat__number">Faster</span>
+                  <span class="stat__label">Than alternatives</span>
                 </div>
               </div>
-              <div class="solution__body">
-                <div class="solution__description">
-                  <p>
-                    A streamlined tool for creating Dungeons &amp; Dragons characters — built because
-                    existing tools were slow and clunky. Through <strong>7 iterations</strong> and
-                    testing with <strong>20+ users</strong>, the builder has been refined into a fast,
-                    intuitive experience that outperforms alternatives.
-                  </p>
-                  <p>
-                    Actively used by my friend group whenever we need new characters for a campaign.
-                    User testing consistently shows it's faster than other character creation tools on
-                    the market.
-                  </p>
-                  <ul class="solution__tech">
-                    <li>Web App</li>
-                    <li>Fly.io</li>
-                    <li>7 Iterations</li>
-                    <li>User Tested</li>
-                  </ul>
-                  <div class="solution__links">
-                    <a href="https://dnd-creator.fly.dev" target="_blank" rel="noopener">Try It Live &rarr;</a>
-                  </div>
-                </div>
-                <div class="solution__stats">
-                  <div class="stat">
-                    <span class="stat__number">7</span>
-                    <span class="stat__label">Iterations</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat__number">20+</span>
-                    <span class="stat__label">Users Tested</span>
-                  </div>
-                  <div class="stat">
-                    <span class="stat__number highlight-fast">Faster</span>
-                    <span class="stat__label">Than Alternatives</span>
-                  </div>
-                </div>
+              <ul class="solution__tech">
+                <li>Web App</li>
+                <li>Fly.io</li>
+                <li>User Tested</li>
+              </ul>
+              <div class="solution__links">
+                <a href="https://dnd-creator.fly.dev" target="_blank" rel="noopener" class="btn btn--sm">Try it live &rarr;</a>
               </div>
             </article>
 
-            <!-- Slide 2 — Employee Recognition Platform -->
+            <!-- Slide 2 -->
             <article class="carousel__slide solution">
-              <div class="solution__header">
-                <div class="solution__number">02</div>
-                <div>
-                  <p class="solution__label">SaaS MVP &middot; Employee Retention</p>
-                  <h3 class="solution__title">Employee Recognition Platform</h3>
-                </div>
+              <div class="solution__top">
+                <span class="solution__badge">SaaS MVP</span>
+                <span class="solution__badge solution__badge--accent">Employee retention</span>
               </div>
-              <div class="solution__body">
-                <div class="solution__description">
-                  <p>
-                    Built for companies with <strong>high turnover rates</strong>, especially those
-                    with remote workers who can feel invisible. The platform tracks employee birthdays,
-                    work milestones, and key moments — then gathers personal messages and feedback
-                    from teammates.
-                  </p>
-                  <p>
-                    It generates a <strong>personalized celebration website</strong> for each employee,
-                    where colleagues' messages are displayed and gift cards can be attached. The goal:
-                    make every employee feel genuinely seen and valued.
-                  </p>
-                  <ul class="solution__tech">
-                    <li>Web Platform</li>
-                    <li>Fly.io</li>
-                    <li>Personalized Pages</li>
-                    <li>Gift Card Integration</li>
-                  </ul>
-                  <div class="solution__links">
-                    <a href="https://employee-gifting-mvp.fly.dev" target="_blank" rel="noopener">View Demo &rarr;</a>
-                  </div>
-                </div>
-                <div class="solution__highlights">
-                  <div class="highlight-card">
-                    <span class="highlight-card__icon">&#128197;</span>
-                    <span class="highlight-card__text">Tracks birthdays &amp; milestones</span>
-                  </div>
-                  <div class="highlight-card">
-                    <span class="highlight-card__icon">&#128172;</span>
-                    <span class="highlight-card__text">Collects team messages &amp; feedback</span>
-                  </div>
-                  <div class="highlight-card">
-                    <span class="highlight-card__icon">&#127873;</span>
-                    <span class="highlight-card__text">Personalized page with gift cards</span>
-                  </div>
-                  <div class="highlight-card">
-                    <span class="highlight-card__icon">&#127760;</span>
-                    <span class="highlight-card__text">Tailored for remote teams</span>
-                  </div>
-                </div>
+              <h3 class="solution__title">Employee Recognition Platform</h3>
+              <p class="solution__description">
+                Built for companies with <strong>high turnover rates</strong>,
+                especially remote teams where people feel invisible. Tracks employee
+                birthdays, milestones, and key moments &mdash; gathers personal messages
+                and feedback from teammates.
+              </p>
+              <p class="solution__description">
+                Generates a <strong>personalized celebration website</strong> for each
+                employee with colleagues' messages and gift card options. The goal:
+                make every employee feel genuinely seen.
+              </p>
+              <div class="solution__features-grid">
+                <div class="feature-pill">Tracks birthdays &amp; milestones</div>
+                <div class="feature-pill">Collects team feedback</div>
+                <div class="feature-pill">Personalized celebration page</div>
+                <div class="feature-pill">Gift card integration</div>
+                <div class="feature-pill">Built for remote teams</div>
+              </div>
+              <ul class="solution__tech">
+                <li>Web Platform</li>
+                <li>Fly.io</li>
+                <li>Personalized Pages</li>
+              </ul>
+              <div class="solution__links">
+                <a href="https://employee-gifting-mvp.fly.dev" target="_blank" rel="noopener" class="btn btn--sm">View demo &rarr;</a>
               </div>
             </article>
 
-            <!-- Slide 3 — Habit Tracker -->
+            <!-- Slide 3 -->
             <article class="carousel__slide solution">
-              <div class="solution__header">
-                <div class="solution__number">03</div>
-                <div>
-                  <p class="solution__label">Mobile App &middot; React Native</p>
-                  <h3 class="solution__title">Gold Habit Tracker</h3>
+              <div class="solution__top">
+                <span class="solution__badge">Mobile App</span>
+                <span class="solution__badge solution__badge--accent">React Native</span>
+              </div>
+              <h3 class="solution__title">Gold Habit Tracker</h3>
+              <p class="solution__description">
+                A habit tracking app with a twist: a <strong>gold-based reward
+                and punishment system</strong>. Miss a workout? Buy gold.
+                Hit a goal? Sell gold. The stakes make it stick.
+              </p>
+              <p class="solution__description">
+                Features a <strong>Kanban board</strong> for goals and tasks,
+                a <strong>workout logger</strong>, and the gold economy that
+                turns discipline into a game. Built for myself, used daily.
+              </p>
+              <div class="solution__rules">
+                <div class="rule rule--penalty">
+                  <span class="rule__label">Miss workout</span>
+                  <span class="rule__arrow">&rarr;</span>
+                  <span class="rule__result">Buy gold</span>
+                </div>
+                <div class="rule rule--reward">
+                  <span class="rule__label">Reach a goal</span>
+                  <span class="rule__arrow">&rarr;</span>
+                  <span class="rule__result">Sell gold</span>
                 </div>
               </div>
-              <div class="solution__body">
-                <div class="solution__description">
-                  <p>
-                    A personal habit tracking app built in <strong>React Native</strong> with
-                    a twist: a gold-based reward and punishment system. Miss a workout? You have
-                    to buy gold. Hit a goal? You get to sell some. The stakes make it stick.
-                  </p>
-                  <p>
-                    Features a <strong>Kanban board</strong> for managing goals and tasks,
-                    a <strong>workout logger</strong> for tracking sessions, and the gold economy
-                    that turns discipline into a game. Built for myself, used daily.
-                  </p>
-                  <ul class="solution__tech">
-                    <li>React Native</li>
-                    <li>Kanban Board</li>
-                    <li>Workout Logger</li>
-                    <li>Gold Economy</li>
-                  </ul>
-                </div>
-                <div class="solution__features">
-                  <div class="feature-item">
-                    <span class="feature-item__label">Miss workout</span>
-                    <span class="feature-item__arrow">&rarr;</span>
-                    <span class="feature-item__result feature-item__result--penalty">Buy gold</span>
-                  </div>
-                  <div class="feature-item">
-                    <span class="feature-item__label">Reach a goal</span>
-                    <span class="feature-item__arrow">&rarr;</span>
-                    <span class="feature-item__result feature-item__result--reward">Sell gold</span>
-                  </div>
-                  <div class="feature-item">
-                    <span class="feature-item__label">Kanban board</span>
-                    <span class="feature-item__arrow">&rarr;</span>
-                    <span class="feature-item__result">Goals &amp; tasks</span>
-                  </div>
-                  <div class="feature-item">
-                    <span class="feature-item__label">Workout log</span>
-                    <span class="feature-item__arrow">&rarr;</span>
-                    <span class="feature-item__result">Track sessions</span>
-                  </div>
-                </div>
-              </div>
+              <ul class="solution__tech">
+                <li>React Native</li>
+                <li>Kanban Board</li>
+                <li>Workout Logger</li>
+                <li>Gold Economy</li>
+              </ul>
             </article>
 
           </div>
         </div>
 
-        <!-- Carousel controls -->
         <button class="carousel__arrow carousel__arrow--prev" aria-label="Previous solution">&larr;</button>
         <button class="carousel__arrow carousel__arrow--next" aria-label="Next solution">&rarr;</button>
 
         <div class="carousel__dots">
-          <button class="carousel__dot carousel__dot--active" aria-label="Go to solution 1"></button>
-          <button class="carousel__dot" aria-label="Go to solution 2"></button>
-          <button class="carousel__dot" aria-label="Go to solution 3"></button>
+          <button class="carousel__dot carousel__dot--active" aria-label="Solution 1"></button>
+          <button class="carousel__dot" aria-label="Solution 2"></button>
+          <button class="carousel__dot" aria-label="Solution 3"></button>
         </div>
       </div>
 
     </div>
   </section>
 
-  <div class="neon-divider"></div>
-
   <!-- ======== OTHER PROJECTS ======== -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="section__title" data-number="03">Other Projects</h2>
-      <p class="section__subtitle">// university research and explorations &mdash; drag cards to rearrange</p>
+      <h2 class="section__title">Other projects</h2>
+      <p class="section__subtitle">University research and explorations. Drag to rearrange on desktop.</p>
 
       <div class="projects-grid" id="projects-grid">
 
-        <!-- Gender Disparities -->
         <article class="project-card fade-in">
           <p class="project-card__label">Data Analysis</p>
           <h3 class="project-card__title">Gender Disparities in Denmark</h3>
           <p class="project-card__description">
             In-depth analysis of gender gaps in income, parental leave, and education
-            across Denmark — with interactive maps and time-series charts.
+            with interactive maps and time-series charts.
           </p>
           <ul class="project-card__tech">
             <li>Python</li>
@@ -316,7 +281,6 @@ async function celebrate
           </div>
         </article>
 
-        <!-- Randaberg Sauna -->
         <article class="project-card fade-in">
           <p class="project-card__label">Web App</p>
           <h3 class="project-card__title">Randaberg Sauna</h3>
@@ -332,72 +296,46 @@ async function celebrate
           </div>
         </article>
 
-        <!-- Music Graphs -->
         <article class="project-card fade-in">
-          <p class="project-card__label">Social Graphs (02805)</p>
-          <h3 class="project-card__title">Unveiling the Music Graphs</h3>
+          <p class="project-card__label">Social Graphs</p>
+          <h3 class="project-card__title">Music Network Analysis</h3>
           <p class="project-card__description">
-            Analysed Spotify data to uncover network structures between artists and tracks
+            Analysed Spotify data to uncover network structures between artists
             using graph theory and community detection.
           </p>
           <ul class="project-card__tech">
             <li>Python</li>
             <li>NetworkX</li>
-            <li>Graph Analysis</li>
           </ul>
           <div class="project-card__links">
             <a href="https://github.com/bakos97/Final-project-Social-Graphs" target="_blank" rel="noopener">GitHub &rarr;</a>
           </div>
         </article>
 
-        <!-- X-Ray Segmentation -->
         <article class="project-card fade-in">
           <p class="project-card__label">Deep Learning</p>
           <h3 class="project-card__title">X-Ray Image Segmentation</h3>
           <p class="project-card__description">
-            Automated segmentation of ptychographic X-ray images using UNet and VGGnet
-            deep neural networks.
+            Automated segmentation of ptychographic X-ray images using UNet and VGGnet.
           </p>
           <ul class="project-card__tech">
             <li>PyTorch</li>
             <li>UNet</li>
-            <li>VGGnet</li>
           </ul>
           <div class="project-card__links">
             <a href="https://github.com/bakos97/AIStudentProjects" target="_blank" rel="noopener">GitHub &rarr;</a>
           </div>
         </article>
 
-        <!-- Face Perception -->
-        <article class="project-card fade-in">
-          <p class="project-card__label">Cognitive Science</p>
-          <h3 class="project-card__title">Face Perception Modelling</h3>
-          <p class="project-card__description">
-            Computational models of human face perception using the UTKFaces dataset,
-            comparing model predictions against human ratings.
-          </p>
-          <ul class="project-card__tech">
-            <li>Python</li>
-            <li>NumPy</li>
-            <li>Cognitive Modelling</li>
-          </ul>
-          <div class="project-card__links">
-            <a href="https://github.com/bakos97/Cognitive-Modelling-Homework-2-Modelling-of-face-perception" target="_blank" rel="noopener">GitHub &rarr;</a>
-          </div>
-        </article>
-
-        <!-- Heart Failure -->
         <article class="project-card fade-in">
           <p class="project-card__label">Machine Learning</p>
           <h3 class="project-card__title">Heart Failure Prediction</h3>
           <p class="project-card__description">
-            Built and evaluated ML models for predicting patient outcomes from
-            clinical heart failure records.
+            ML models for predicting patient outcomes from clinical heart failure records.
           </p>
           <ul class="project-card__tech">
             <li>Scikit-learn</li>
             <li>Jupyter</li>
-            <li>Clinical Data</li>
           </ul>
           <div class="project-card__links">
             <a href="https://github.com/bakos97/Machine-learning-assignment-2" target="_blank" rel="noopener">GitHub &rarr;</a>
@@ -408,19 +346,17 @@ async function celebrate
     </div>
   </section>
 
-  <div class="neon-divider"></div>
-
   <!-- ======== CONTACT ======== -->
-  <section class="section contact" id="contact">
+  <section class="section section--alt contact" id="contact">
     <div class="container">
-      <h2 class="section__title" data-number="04">Get In Touch</h2>
+      <h2 class="section__title">Let's talk</h2>
       <p class="section__subtitle">
-        I'm open to opportunities and always happy to connect.
-        Whether you have a question, a project idea, or just want to say hi — drop me a line.
+        I'm looking for founding-stage roles where I can build product from day one.
+        If you're building something ambitious with a small team &mdash; I'd love to chat.
       </p>
       <div class="contact__socials">
-        <a href="https://github.com/bakos97" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
-        <a href="https://linkedin.com/in/christianbakosleirvaag" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+        <a href="https://github.com/bakos97" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/christianbakosleirvaag" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </section>
@@ -428,8 +364,7 @@ async function celebrate
   <!-- ======== FOOTER ======== -->
   <footer class="footer">
     <div class="container">
-      <span class="neon-line" aria-hidden="true"></span>
-      <p>Designed &amp; built by Christian Bakos Leirv&aring;g</p>
+      <p>Built by Christian Bakos Leirv&aring;g</p>
     </div>
   </footer>
 
