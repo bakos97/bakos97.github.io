@@ -357,6 +357,85 @@ body::after {
 }
 
 /* ============================================
+   CAROUSEL — Solutions slider
+   ============================================ */
+.carousel {
+  position: relative;
+}
+.carousel__viewport {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.carousel__track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.carousel__track.is-dragging {
+  transition: none;
+  cursor: grabbing;
+}
+.carousel__slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+/* Arrows */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: rgba(10, 10, 26, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--color-cyan);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel__arrow:hover {
+  border-color: var(--color-cyan);
+  box-shadow: var(--glow-cyan);
+  color: var(--color-heading);
+}
+.carousel__arrow--prev { left: -24px; }
+.carousel__arrow--next { right: -24px; }
+
+/* Dots */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0;
+}
+.carousel__dot:hover {
+  border-color: var(--color-pink);
+  box-shadow: var(--glow-pink);
+}
+.carousel__dot--active {
+  background: var(--color-pink);
+  border-color: var(--color-pink);
+  box-shadow: var(--glow-pink);
+}
+
+/* ============================================
    SOLUTIONS — Featured showcases
    ============================================ */
 .solution {
@@ -364,7 +443,6 @@ body::after {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   overflow: hidden;
-  margin-bottom: 2.5rem;
   transition: border-color var(--transition), box-shadow var(--transition);
   backdrop-filter: blur(8px);
 }
@@ -573,7 +651,7 @@ body::after {
 }
 
 /* ============================================
-   OTHER PROJECTS — Compact grid cards
+   OTHER PROJECTS — Draggable grid cards
    ============================================ */
 .projects-grid {
   display: grid;
@@ -585,15 +663,27 @@ body::after {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 1.75rem;
-  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), opacity var(--transition);
   backdrop-filter: blur(8px);
   display: flex;
   flex-direction: column;
+  cursor: grab;
+  user-select: none;
 }
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-purple);
   box-shadow: var(--glow-purple);
+}
+.project-card.is-dragging {
+  opacity: 0.4;
+  transform: scale(0.95);
+  cursor: grabbing;
+}
+.project-card.drag-over {
+  border-color: var(--color-cyan);
+  box-shadow: var(--glow-cyan), inset 0 0 30px rgba(1, 205, 254, 0.05);
+  transform: translateY(-2px) scale(1.02);
 }
 .project-card__label {
   font-family: var(--font-mono);
@@ -775,6 +865,11 @@ body::after {
   .about__photo-wrapper { max-width: 300px; margin: 0 auto; }
   .hero__cta { flex-direction: column; }
   .code-float { display: none; }
+
+  /* Carousel responsive */
+  .carousel__arrow--prev { left: 4px; }
+  .carousel__arrow--next { right: 4px; }
+  .carousel__arrow { width: 36px; height: 36px; font-size: 1rem; }
 
   /* Solutions responsive */
   .solution__header { padding: 1.5rem 1.5rem 0; }

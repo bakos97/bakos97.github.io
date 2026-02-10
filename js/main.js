@@ -256,7 +256,171 @@
   window.addEventListener('scroll', highlightNav);
 
   // =========================================================
-  // 7. FLOATING CODE SNIPPETS PARALLAX
+  // 7. SOLUTIONS CAROUSEL
+  // =========================================================
+  var carousel = document.getElementById('solutions-carousel');
+  if (carousel) {
+    var track = carousel.querySelector('.carousel__track');
+    var slides = carousel.querySelectorAll('.carousel__slide');
+    var prevBtn = carousel.querySelector('.carousel__arrow--prev');
+    var nextBtn = carousel.querySelector('.carousel__arrow--next');
+    var dots = carousel.querySelectorAll('.carousel__dot');
+    var currentSlide = 0;
+    var slideCount = slides.length;
+
+    function goToSlide(index) {
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+      currentSlide = index;
+      track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('carousel__dot--active', i === currentSlide);
+      });
+    }
+
+    prevBtn.addEventListener('click', function () { goToSlide(currentSlide - 1); });
+    nextBtn.addEventListener('click', function () { goToSlide(currentSlide + 1); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { goToSlide(i); });
+    });
+
+    // Keyboard navigation
+    carousel.setAttribute('tabindex', '0');
+    carousel.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+      if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
+    });
+
+    // Touch / pointer swipe
+    var startX = 0;
+    var isDragging = false;
+    var dragOffset = 0;
+    var slideWidth = 0;
+
+    function getSlideWidth() {
+      slideWidth = carousel.querySelector('.carousel__viewport').offsetWidth;
+    }
+    getSlideWidth();
+    window.addEventListener('resize', getSlideWidth);
+
+    track.addEventListener('pointerdown', function (e) {
+      // Don't hijack clicks on links/buttons
+      if (e.target.closest('a, button')) return;
+      isDragging = true;
+      startX = e.clientX;
+      dragOffset = 0;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(e.pointerId);
+    });
+
+    track.addEventListener('pointermove', function (e) {
+      if (!isDragging) return;
+      dragOffset = e.clientX - startX;
+      var base = -(currentSlide * slideWidth);
+      track.style.transform = 'translateX(' + (base + dragOffset) + 'px)';
+    });
+
+    track.addEventListener('pointerup', function () {
+      if (!isDragging) return;
+      isDragging = false;
+      track.classList.remove('is-dragging');
+      var threshold = slideWidth * 0.2;
+      if (dragOffset < -threshold) {
+        goToSlide(currentSlide + 1);
+      } else if (dragOffset > threshold) {
+        goToSlide(currentSlide - 1);
+      } else {
+        goToSlide(currentSlide);
+      }
+    });
+
+    track.addEventListener('pointercancel', function () {
+      isDragging = false;
+      track.classList.remove('is-dragging');
+      goToSlide(currentSlide);
+    });
+
+    // Prevent native drag on images/links inside carousel
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  }
+
+  // =========================================================
+  // 8. DRAGGABLE PROJECT CARDS
+  // =========================================================
+  var projectsGrid = document.getElementById('projects-grid');
+  if (projectsGrid) {
+    var dragSrcEl = null;
+
+    function handleDragStart(e) {
+      dragSrcEl = this;
+      this.classList.add('is-dragging');
+      e.dataTransfer.effectAllowed = 'move';
+      e.dataTransfer.setData('text/html', this.outerHTML);
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      this.classList.add('drag-over');
+      return false;
+    }
+
+    function handleDragEnter(e) {
+      e.preventDefault();
+      this.classList.add('drag-over');
+    }
+
+    function handleDragLeave() {
+      this.classList.remove('drag-over');
+    }
+
+    function handleDrop(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      if (dragSrcEl !== this) {
+        // Swap DOM positions
+        var parent = this.parentNode;
+        var srcNext = dragSrcEl.nextElementSibling;
+        var targetNext = this.nextElementSibling;
+
+        if (srcNext === this) {
+          parent.insertBefore(this, dragSrcEl);
+        } else if (targetNext === dragSrcEl) {
+          parent.insertBefore(dragSrcEl, this);
+        } else {
+          parent.insertBefore(dragSrcEl, targetNext);
+          parent.insertBefore(this, srcNext);
+        }
+      }
+      this.classList.remove('drag-over');
+      return false;
+    }
+
+    function handleDragEnd() {
+      this.classList.remove('is-dragging');
+      projectsGrid.querySelectorAll('.project-card').forEach(function (card) {
+        card.classList.remove('drag-over');
+      });
+    }
+
+    function initDraggableCards() {
+      var cards = projectsGrid.querySelectorAll('.project-card');
+      cards.forEach(function (card) {
+        card.setAttribute('draggable', 'true');
+        card.addEventListener('dragstart', handleDragStart);
+        card.addEventListener('dragover', handleDragOver);
+        card.addEventListener('dragenter', handleDragEnter);
+        card.addEventListener('dragleave', handleDragLeave);
+        card.addEventListener('drop', handleDrop);
+        card.addEventListener('dragend', handleDragEnd);
+      });
+    }
+
+    initDraggableCards();
+  }
+
+  // =========================================================
+  // 9. FLOATING CODE SNIPPETS PARALLAX
   // =========================================================
   var codeFloats = document.querySelectorAll('.code-float');
   if (codeFloats.length) {
