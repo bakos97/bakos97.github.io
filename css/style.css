@@ -605,6 +605,129 @@ strong { color: var(--color-heading); font-weight: 600; }
   font-weight: 500;
 }
 
+/* ============================================
+   EXPERIENCE TIMELINE
+   ============================================ */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+.timeline__item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline__item:last-child { margin-bottom: 0; }
+.timeline__marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  border: 3px solid var(--color-bg-alt);
+  z-index: 1;
+}
+.timeline__content {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: border-color var(--transition);
+}
+.timeline__content:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+}
+.timeline__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.timeline__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  line-height: 1.3;
+}
+.timeline__role {
+  font-size: 0.8rem;
+  color: var(--color-accent-light);
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+.timeline__date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+.timeline__desc {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+.timeline__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.timeline__tech li {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+/* ============================================
+   EXPERIENCE FOOTER (Education / Certs / Languages)
+   ============================================ */
+.experience-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+.experience-footer__title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.6rem;
+}
+.experience-footer__item {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+.experience-footer__item strong {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
 /* ---------- Contact ---------- */
 .contact { text-align: center; }
 .contact .section__title { text-align: center; }
@@ -692,6 +815,11 @@ strong { color: var(--color-heading); font-weight: 600; }
   .stat__number { font-size: 1.3rem; }
   .showcase__rules { flex-direction: column; gap: 0.4rem; }
   .showcase__phone { width: 180px; }
+
+  /* Timeline */
+  .timeline__header { flex-direction: column; gap: 0.25rem; }
+  .timeline__date { align-self: flex-start; }
+  .experience-footer { grid-template-columns: 1fr; }
 
   /* Projects */
   .projects-grid { grid-template-columns: 1fr; }

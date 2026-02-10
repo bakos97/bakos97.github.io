@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian Bakos Leirv&aring;g — Fullstack Developer</title>
-  <meta name="description" content="Christian Bakos Leirv&aring;g — fullstack developer who builds and ships real products. D&amp;D character builder, employee recognition platform, habit tracker app." />
+  <meta name="description" content="Christian Bakos Leirv&aring;g — fullstack developer and data consultant who builds and ships real products. Currently consulting at Capgemini, looking for founding engineering roles." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
@@ -19,6 +19,7 @@
       <div class="nav__links">
         <a href="#about">About</a>
         <a href="#solutions">Solutions</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -35,10 +36,10 @@
       <h1 class="hero__name">Christian Bakos Leirv&aring;g</h1>
       <h2 class="hero__tagline">I build and ship products people actually use.</h2>
       <p class="hero__description">
-        Fullstack developer with a background in data science and ML from DTU.
+        Fullstack developer currently consulting at <strong>Capgemini</strong>, delivering
+        end-to-end data solutions for clients like ConocoPhillips. MSc in Data Science from DTU.
         I've built web apps, mobile apps, and SaaS MVPs from scratch &mdash; tested
-        with real users, iterated on feedback, and deployed to production. I use
-        Claude Code and Cursor daily.
+        with real users, iterated on feedback, and deployed to production.
       </p>
       <div class="hero__cta">
         <a href="#solutions" class="btn btn--primary">See what I've built</a>
@@ -50,9 +51,9 @@
         <span>React Native</span>
         <span>Python</span>
         <span>PostgreSQL</span>
-        <span>GCP</span>
+        <span>Azure</span>
         <span>AI/LLMs</span>
-        <span>Fly.io</span>
+        <span>Snowflake</span>
       </div>
     </div>
   </section>
@@ -65,19 +66,19 @@
         <div class="about__text">
           <p>
             I studied at the <strong>Technical University of Denmark (DTU)</strong>,
-            where I built a foundation in data science, machine learning, and
-            software engineering. But what drives me is
+            where I got my MSc in Data Science, and have a BSc in Computer Engineering
+            from the University of Stavanger. What drives me is
             <strong>shipping things that work</strong>.
           </p>
           <p>
-            I've launched multiple products from scratch &mdash; web apps with active
-            users, a React Native app I use daily, and SaaS MVPs built for real
-            business problems. Every solution has been through user testing,
-            feedback cycles, and iteration.
+            By day I consult at <strong>Capgemini</strong>, where I&rsquo;ve delivered
+            end-to-end data solutions for ConocoPhillips &mdash; ETL pipelines, NLP
+            processing, Power BI dashboards &mdash; and built ML models at NaviBlind.
+            On the side, I build my own products from scratch.
           </p>
           <p>
             I work with <strong>AI tools daily</strong> &mdash; Claude Code and Cursor
-            are part of my workflow. I'm pragmatic: I find solutions with what I have
+            are part of my workflow. I&rsquo;m pragmatic: I find solutions with what I have
             and ship. I thrive in small teams where decisions become product fast.
           </p>
         </div>
@@ -93,14 +94,14 @@
             <div class="trait__icon">&#128736;</div>
             <div>
               <h3 class="trait__title">Fullstack</h3>
-              <p class="trait__text">Frontend, backend, infra, deploy. The whole loop.</p>
+              <p class="trait__text">Frontend, backend, data, infra. The whole loop.</p>
             </div>
           </div>
           <div class="trait">
             <div class="trait__icon">&#129302;</div>
             <div>
               <h3 class="trait__title">AI-native</h3>
-              <p class="trait__text">Claude Code &amp; Cursor daily. LLM integrations.</p>
+              <p class="trait__text">LLM fine-tuning, NLP, prompt engineering. Daily.</p>
             </div>
           </div>
           <div class="trait">
@@ -273,6 +274,187 @@
       </article>
     </div>
 
+  </section>
+
+  <!-- ======== EXPERIENCE ======== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section__title">Professional background</h2>
+      <p class="section__subtitle">Where I've shipped products professionally.</p>
+
+      <div class="timeline">
+
+        <!-- ConocoPhillips MOC -->
+        <article class="timeline__item fade-in">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__title">Management of Change &mdash; ConocoPhillips</h3>
+                <p class="timeline__role">Data Engineer / Data Analyst</p>
+              </div>
+              <span class="timeline__date">Mar 2025 &ndash; Aug 2025</span>
+            </div>
+            <p class="timeline__desc">
+              Independently delivered a complete ETL + reporting solution. Built a
+              Medallion architecture, implemented NLP to transform unstructured SAP data,
+              and shipped 16 Power BI reports through iterative workshops with users.
+            </p>
+            <ul class="timeline__tech">
+              <li>Snowflake</li>
+              <li>Azure Data Factory</li>
+              <li>Power BI</li>
+              <li>Python</li>
+              <li>NLP</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ConocoPhillips R&D -->
+        <article class="timeline__item fade-in">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__title">R&amp;D Cost Data Migration &mdash; ConocoPhillips</h3>
+                <p class="timeline__role">Data Engineer / Data Analyst</p>
+              </div>
+              <span class="timeline__date">Sep 2024 &ndash; Feb 2025</span>
+            </div>
+            <p class="timeline__desc">
+              Migrated R&amp;D cost data from on-prem Oracle to Azure/Snowflake.
+              Built reusable ADF pipelines, developed the Power BI semantic model,
+              and delivered a production dashboard used in the quarterly audit.
+            </p>
+            <ul class="timeline__tech">
+              <li>Snowflake</li>
+              <li>SQL</li>
+              <li>Azure DevOps</li>
+              <li>Power BI</li>
+              <li>Oracle</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- NaviBlind -->
+        <article class="timeline__item fade-in">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__title">Pedestrian Pathway Prediction &mdash; NaviBlind</h3>
+                <p class="timeline__role">Machine Learning Engineer</p>
+              </div>
+              <span class="timeline__date">Feb 2023 &ndash; Mar 2024</span>
+            </div>
+            <p class="timeline__desc">
+              Owned the entire ML pipeline end-to-end: satellite image collection,
+              data labeling, UNET model training, GCP deployment, and API for
+              generating safe routes for blind users.
+            </p>
+            <ul class="timeline__tech">
+              <li>GCP</li>
+              <li>Python</li>
+              <li>PyTorch</li>
+              <li>UNET</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- DTU LLM D&D -->
+        <article class="timeline__item fade-in">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__title">AI-Driven D&amp;D Platform &mdash; DTU Compute</h3>
+                <p class="timeline__role">Project Lead / Developer</p>
+              </div>
+              <span class="timeline__date">Jan 2024 &ndash; Jun 2024</span>
+            </div>
+            <p class="timeline__desc">
+              Led full development cycle: research, Figma prototypes, GPT-3 fine-tuning,
+              front-end &amp; back-end implementation. Iteratively developed with
+              user feedback using the Double Diamond process.
+            </p>
+            <ul class="timeline__tech">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>GPT-3</li>
+              <li>GitHub Actions</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- DTU AI Grading -->
+        <article class="timeline__item fade-in">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__title">AI-Powered Grading &mdash; DTU Compute</h3>
+                <p class="timeline__role">Tech Lead</p>
+              </div>
+              <span class="timeline__date">Jan 2024 &ndash; May 2024</span>
+            </div>
+            <p class="timeline__desc">
+              Fine-tuned GPT-4 on 250+ graded assignments to automate feedback.
+              The model provided more detailed feedback than human graders, validated
+              through cross-validation.
+            </p>
+            <ul class="timeline__tech">
+              <li>Python</li>
+              <li>GPT-4</li>
+              <li>Next.js</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Capgemini UpSkill -->
+        <article class="timeline__item fade-in">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__title">UpSkill Dashboard &mdash; Capgemini</h3>
+                <p class="timeline__role">Business Analyst</p>
+              </div>
+              <span class="timeline__date">Jun 2022 &ndash; Aug 2022</span>
+            </div>
+            <p class="timeline__desc">
+              Designed and integrated a Power BI dashboard into Capgemini&rsquo;s
+              internal upskilling platform. Restructured data architecture and
+              delivered insights on community engagement.
+            </p>
+            <ul class="timeline__tech">
+              <li>Power BI</li>
+              <li>Azure</li>
+              <li>React</li>
+              <li>C# .NET</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Education & Certs inline -->
+      <div class="experience-footer fade-in">
+        <div class="experience-footer__group">
+          <h3 class="experience-footer__title">Education</h3>
+          <p class="experience-footer__item"><strong>MSc Human-Centered AI (Data Science)</strong> &mdash; DTU, 2022&ndash;2024</p>
+          <p class="experience-footer__item"><strong>BSc Computer Science</strong> &mdash; University of Stavanger, 2019&ndash;2022</p>
+        </div>
+        <div class="experience-footer__group">
+          <h3 class="experience-footer__title">Certifications</h3>
+          <p class="experience-footer__item">DP-900: Azure Data Fundamentals</p>
+          <p class="experience-footer__item">AI-900: Azure AI Fundamentals</p>
+        </div>
+        <div class="experience-footer__group">
+          <h3 class="experience-footer__title">Languages</h3>
+          <p class="experience-footer__item">English, Norwegian, Danish</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ======== OTHER PROJECTS ======== -->
