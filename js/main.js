@@ -299,22 +299,23 @@
       category: 'Web App',
       title: 'D&D Character Builder',
       description: 'A streamlined tool for creating Dungeons & Dragons characters. Built because existing tools were slow and clunky. Through 7 iterations and testing with 20+ users, it\'s a fast, intuitive experience that outperforms alternatives.',
-      techStack: ['Ruby on Rails', 'PostgreSQL', 'TailwindCSS', 'Fly.io'],
+      techStack: ['Next.js', 'React', 'Supabase', 'GPT-4', 'Fly.io'],
       links: [
-        { text: 'Try it live', url: 'https://dnd-creator.fly.dev', primary: true },
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/dnd-creator', github: true }
+        { text: 'Try it live', url: 'https://dnd-creator.fly.dev', primary: true }
       ],
+      image: 'assets/screenshots/dnd.png',
       icon: '\uD83D\uDC09'
     },
     'hyllest': {
       category: 'SaaS MVP',
       title: 'Hyllest',
       description: 'Built for companies with high turnover rates, especially remote teams. Tracks birthdays, milestones, and key moments \u2014 generates a personalized celebration website with colleagues\' messages and gift card options.',
-      techStack: ['Full-Stack Web', 'Fly.io', 'Personalized Pages'],
+      techStack: ['Full-Stack Web', 'Supabase', 'Fly.io'],
       links: [
         { text: 'View Site', url: 'https://employee-gifting-mvp.fly.dev', primary: true },
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/hyllest', github: true }
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/employee-gifting-mvp', github: true }
       ],
+      image: 'assets/screenshots/Hyllest.png',
       icon: '\uD83C\uDFC6'
     },
     'gold-habit-tracker': {
@@ -344,6 +345,7 @@
       links: [
         { text: 'Live Site', url: 'https://randaberg-sauna.fly.dev', primary: true }
       ],
+      image: 'assets/screenshots/bastue.png',
       icon: '\uD83E\uDDD6\u200D\u2642\uFE0F'
     },
     'music-network': {
