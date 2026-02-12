@@ -793,10 +793,16 @@ strong {
   user-select: none;
 }
 
-.project-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(167, 139, 250, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 16px rgba(167, 139, 250, 0.05);
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(167, 139, 250, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 16px rgba(167, 139, 250, 0.05);
+  }
+}
+
+.project-card:active {
+  transform: scale(0.98);
 }
 
 .project-card.is-dragging {
@@ -1583,6 +1589,13 @@ strong {
   .project-card {
     cursor: default;
     user-select: auto;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .project-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   /* Contact */
