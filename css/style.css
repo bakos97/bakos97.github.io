@@ -1516,6 +1516,14 @@ strong {
     gap: 2rem;
   }
 
+  .about__traits {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
   /* Showcases stack on mobile */
   .showcase {
     grid-template-columns: 1fr;
