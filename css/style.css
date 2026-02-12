@@ -20,6 +20,17 @@
   --color-red: #ef4444;
   --color-amber: #f59e0b;
 
+  /* Neon / Vaporwave accents */
+  --color-neon-pink: #ff71ce;
+  --color-neon-cyan: #01cdfe;
+  --color-neon-purple: #b967ff;
+  --color-neon-yellow: #fffb96;
+
+  /* Maturity badge colors */
+  --color-maturity-live: #22c55e;
+  --color-maturity-beta: #01cdfe;
+  --color-maturity-mvp: #f59e0b;
+
   --font-body: 'JetBrains Mono', monospace;
   --font-display: 'JetBrains Mono', monospace;
   --font-mono: 'JetBrains Mono', monospace;
@@ -794,8 +805,7 @@ strong {
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition), opacity var(--transition);
   display: flex;
   flex-direction: column;
-  cursor: grab;
-  user-select: none;
+  cursor: pointer;
 }
 
 @media (hover: hover) {
@@ -804,22 +814,6 @@ strong {
     border-color: rgba(167, 139, 250, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 16px rgba(167, 139, 250, 0.05);
   }
-}
-
-.project-card:active {
-  transform: scale(0.98);
-}
-
-.project-card.is-dragging {
-  opacity: 0.35;
-  transform: scale(0.97);
-  cursor: grabbing;
-}
-
-.project-card.drag-over {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.2);
-  transform: scale(1.01);
 }
 
 .project-card__label {
@@ -1378,6 +1372,221 @@ strong {
 }
 
 /* ============================================
+   FILTER CONTROLS
+   ============================================ */
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.projects-filter__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.projects-filter__btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.projects-filter__btn:hover {
+  border-color: var(--color-neon-purple);
+  color: var(--color-heading);
+}
+
+.projects-filter__btn--active {
+  background: rgba(185, 103, 255, 0.12);
+  border-color: var(--color-neon-purple);
+  color: var(--color-heading);
+  box-shadow: 0 0 12px rgba(185, 103, 255, 0.2);
+}
+
+.projects-filter__search {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-text);
+  outline: none;
+  width: 200px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.projects-filter__search::placeholder {
+  color: var(--color-text-muted);
+}
+
+.projects-filter__search:focus {
+  border-color: var(--color-neon-cyan);
+  box-shadow: 0 0 12px rgba(1, 205, 254, 0.15);
+}
+
+/* ============================================
+   FEATURED BADGE & CARD VARIANT
+   ============================================ */
+.project-card--featured {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card--featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-neon-pink), var(--color-neon-purple), var(--color-neon-cyan));
+}
+
+.project-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.project-card__featured-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  background: rgba(255, 113, 206, 0.12);
+  color: var(--color-neon-pink);
+  border: 1px solid rgba(255, 113, 206, 0.25);
+}
+
+/* ============================================
+   MATURITY BADGES
+   ============================================ */
+.project-card__maturity {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+}
+
+.project-card__maturity--live {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-maturity-live);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.project-card__maturity--live .maturity-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-maturity-live);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.project-card__maturity--beta {
+  background: rgba(1, 205, 254, 0.1);
+  color: var(--color-maturity-beta);
+  border: 1px solid rgba(1, 205, 254, 0.25);
+}
+
+.project-card__maturity--mvp {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--color-maturity-mvp);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* ============================================
+   CARD IMAGE AREA
+   ============================================ */
+.project-card__image {
+  width: calc(100% + 3rem);
+  margin: -1.5rem -1.5rem 1rem;
+  height: 160px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.05);
+}
+
+.project-card__image-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 0.25;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(1, 205, 254, 0.04));
+}
+
+/* ============================================
+   FILTER TRANSITIONS & EMPTY STATE
+   ============================================ */
+.project-card--hidden {
+  display: none;
+}
+
+.projects-grid__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   GITHUB BUTTON IN MODAL
+   ============================================ */
+.btn--github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn--github svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* ============================================
    TIMELINE REFINEMENTS
    ============================================ */
 .timeline::before {
@@ -1609,8 +1818,7 @@ strong {
   }
 
   .project-card {
-    cursor: default;
-    user-select: auto;
+    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -1618,6 +1826,20 @@ strong {
     transform: none;
     box-shadow: none;
     border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .projects-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .projects-filter__search {
+    width: 100%;
+  }
+
+  .project-card__image {
+    width: calc(100% + 2.5rem);
+    margin: -1.25rem -1.25rem 1rem;
   }
 
   /* Contact */

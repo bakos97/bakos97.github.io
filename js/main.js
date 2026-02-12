@@ -76,73 +76,70 @@
   window.addEventListener('scroll', highlightNav);
 
   // =========================================================
-  // 5. DRAGGABLE PROJECT CARDS (desktop only)
+  // 5. PROJECT FILTERING & SEARCH
   // =========================================================
   var projectsGrid = document.getElementById('projects-grid');
-  if (projectsGrid && window.matchMedia('(min-width: 769px)').matches) {
-    var dragSrcEl = null;
+  var filterBtns = document.querySelectorAll('.projects-filter__btn');
+  var searchInput = document.querySelector('.projects-filter__search');
 
-    function handleDragStart(e) {
-      dragSrcEl = this;
-      this.classList.add('is-dragging');
-      e.dataTransfer.effectAllowed = 'move';
-      e.dataTransfer.setData('text/html', this.outerHTML);
-    }
+  if (projectsGrid && filterBtns.length) {
+    var activeFilter = 'all';
+    var searchTerm = '';
+    var debounceTimer = null;
 
-    function handleDragOver(e) {
-      e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
-      this.classList.add('drag-over');
-      return false;
-    }
+    function filterProjects() {
+      var cards = projectsGrid.querySelectorAll('.project-card');
+      var visibleCount = 0;
 
-    function handleDragEnter(e) {
-      e.preventDefault();
-      this.classList.add('drag-over');
-    }
+      cards.forEach(function (card) {
+        var category = card.getAttribute('data-category') || '';
+        var searchData = (card.getAttribute('data-search') || '').toLowerCase();
+        var matchesCategory = activeFilter === 'all' || category === activeFilter;
+        var matchesSearch = !searchTerm || searchData.indexOf(searchTerm) !== -1;
 
-    function handleDragLeave() {
-      this.classList.remove('drag-over');
-    }
-
-    function handleDrop(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      if (dragSrcEl !== this) {
-        var parent = this.parentNode;
-        var srcNext = dragSrcEl.nextElementSibling;
-        var targetNext = this.nextElementSibling;
-
-        if (srcNext === this) {
-          parent.insertBefore(this, dragSrcEl);
-        } else if (targetNext === dragSrcEl) {
-          parent.insertBefore(dragSrcEl, this);
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('project-card--hidden');
+          visibleCount++;
         } else {
-          parent.insertBefore(dragSrcEl, targetNext);
-          parent.insertBefore(this, srcNext);
+          card.classList.add('project-card--hidden');
         }
+      });
+
+      // Show/hide empty state
+      var emptyMsg = projectsGrid.querySelector('.projects-grid__empty');
+      if (visibleCount === 0) {
+        if (!emptyMsg) {
+          emptyMsg = document.createElement('p');
+          emptyMsg.className = 'projects-grid__empty';
+          emptyMsg.textContent = 'No projects match your search.';
+          projectsGrid.appendChild(emptyMsg);
+        }
+        emptyMsg.style.display = '';
+      } else if (emptyMsg) {
+        emptyMsg.style.display = 'none';
       }
-      this.classList.remove('drag-over');
-      return false;
     }
 
-    function handleDragEnd() {
-      this.classList.remove('is-dragging');
-      projectsGrid.querySelectorAll('.project-card').forEach(function (card) {
-        card.classList.remove('drag-over');
+    // Filter button clicks
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) { b.classList.remove('projects-filter__btn--active'); });
+        btn.classList.add('projects-filter__btn--active');
+        activeFilter = btn.getAttribute('data-filter');
+        filterProjects();
+      });
+    });
+
+    // Search input with debounce
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(function () {
+          searchTerm = searchInput.value.trim().toLowerCase();
+          filterProjects();
+        }, 200);
       });
     }
-
-    var cards = projectsGrid.querySelectorAll('.project-card');
-    cards.forEach(function (card) {
-      card.setAttribute('draggable', 'true');
-      card.addEventListener('dragstart', handleDragStart);
-      card.addEventListener('dragover', handleDragOver);
-      card.addEventListener('dragenter', handleDragEnter);
-      card.addEventListener('dragleave', handleDragLeave);
-      card.addEventListener('drop', handleDrop);
-      card.addEventListener('dragend', handleDragEnd);
-    });
   }
 
   // =========================================================
@@ -298,6 +295,36 @@
   // =========================================================
 
   var projectData = {
+    'dnd-builder': {
+      category: 'Web App',
+      title: 'D&D Character Builder',
+      description: 'A streamlined tool for creating Dungeons & Dragons characters. Built because existing tools were slow and clunky. Through 7 iterations and testing with 20+ users, it\'s a fast, intuitive experience that outperforms alternatives.',
+      techStack: ['Ruby on Rails', 'PostgreSQL', 'TailwindCSS', 'Fly.io'],
+      links: [
+        { text: 'Try it live', url: 'https://dnd-creator.fly.dev', primary: true },
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/dnd-creator', github: true }
+      ],
+      icon: '\uD83D\uDC09'
+    },
+    'hyllest': {
+      category: 'SaaS MVP',
+      title: 'Hyllest',
+      description: 'Built for companies with high turnover rates, especially remote teams. Tracks birthdays, milestones, and key moments \u2014 generates a personalized celebration website with colleagues\' messages and gift card options.',
+      techStack: ['Full-Stack Web', 'Fly.io', 'Personalized Pages'],
+      links: [
+        { text: 'View Site', url: 'https://employee-gifting-mvp.fly.dev', primary: true },
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/hyllest', github: true }
+      ],
+      icon: '\uD83C\uDFC6'
+    },
+    'gold-habit-tracker': {
+      category: 'Mobile App',
+      title: 'Goald',
+      description: 'A habit tracking app with a twist: a gold-based reward and punishment system. Miss a workout? Buy gold. Hit a goal? Sell gold. Features a Kanban board, a workout logger, and a gold economy. Built for myself, used daily.',
+      techStack: ['React Native', 'Expo', 'TypeScript'],
+      links: [],
+      icon: '\uD83D\uDCB0'
+    },
     'gender-disparities': {
       category: 'Data Analysis',
       title: 'Gender Disparities in Denmark',
@@ -305,9 +332,9 @@
       techStack: ['Python', 'Pandas', 'Plotly', 'Jupyter Notebook'],
       links: [
         { text: 'View Analysis', url: 'projects/gender-disparities.html', primary: true },
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/bakos97.github.io' }
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/bakos97.github.io', github: true }
       ],
-      image: 'gender_education2.png' // Using existing image from root
+      image: 'gender_education2.png'
     },
     'randaberg-sauna': {
       category: 'Web App',
@@ -317,7 +344,7 @@
       links: [
         { text: 'Live Site', url: 'https://randaberg-sauna.fly.dev', primary: true }
       ],
-      icon: '🧖‍♂️'
+      icon: '\uD83E\uDDD6\u200D\u2642\uFE0F'
     },
     'music-network': {
       category: 'Social Graphs',
@@ -325,9 +352,9 @@
       description: 'A network analysis project that investigates the relationships between artists on Spotify. By modeling artists as nodes and collaborations/similarities as edges, we used graph theory and community detection algorithms to uncover genres and influential artists within the network.',
       techStack: ['Python', 'NetworkX', 'Spotify API', 'Data Visualization'],
       links: [
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/Final-project-Social-Graphs', primary: true }
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/Final-project-Social-Graphs', primary: true, github: true }
       ],
-      icon: '🎵'
+      icon: '\uD83C\uDFB5'
     },
     'xray-segmentation': {
       category: 'Deep Learning',
@@ -335,9 +362,9 @@
       description: 'Automated segmentation of ptychographic X-ray images using deep learning architectures. We implemented and compared UNet and VGGnet models to accurately identify features in complex X-ray data, aiming to improve analysis speed and accuracy for researchers.',
       techStack: ['PyTorch', 'UNet', 'VGGnet', 'Python', 'Computer Vision'],
       links: [
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/AIStudentProjects', primary: true }
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/AIStudentProjects', primary: true, github: true }
       ],
-      icon: '🧬'
+      icon: '\uD83E\uDDEC'
     },
     'heart-failure': {
       category: 'Machine Learning',
@@ -345,9 +372,9 @@
       description: 'Development of machine learning models to predict patient survival outcomes based on clinical records. We explored various classification algorithms, performed feature engineering, and evaluated model performance to assist in early detection and treatment planning.',
       techStack: ['Scikit-learn', 'Python', 'Pandas', 'Matplotlib'],
       links: [
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/Machine-learning-assignment-2', primary: true }
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/Machine-learning-assignment-2', primary: true, github: true }
       ],
-      icon: '❤️'
+      icon: '\u2764\uFE0F'
     },
     'face-perception': {
       category: 'Cognitive Science',
@@ -355,37 +382,9 @@
       description: 'Computational modelling of human face perception using cognitive science methods. This project involves simulating how humans process and recognize faces, comparing model outputs with behavioral data to understand underlying cognitive mechanisms.',
       techStack: ['Python', 'Cognitive Modelling', 'Data Analysis'],
       links: [
-        { text: 'GitHub Repo', url: 'https://github.com/bakos97/Cognitive-Modelling-Homework-2-Modelling-of-face-perception', primary: true }
+        { text: 'GitHub Repo', url: 'https://github.com/bakos97/Cognitive-Modelling-Homework-2-Modelling-of-face-perception', primary: true, github: true }
       ],
-      icon: '🧠'
-    },
-    'dnd-builder': {
-      category: 'Web App',
-      title: 'D&D Character Builder',
-      description: 'A streamlined tool for creating Dungeons & Dragons characters. Built because existing tools were slow and clunky. Through 7 iterations and testing with 20+ users, it\'s a fast, intuitive experience that outperforms alternatives.',
-      techStack: ['Web App', 'Fly.io', 'User Tested'],
-      links: [
-        { text: 'Try it live', url: 'https://dnd-creator.fly.dev', primary: true }
-      ],
-      icon: '🐉'
-    },
-    'employee-recognition': {
-      category: 'SaaS MVP',
-      title: 'Employee Recognition Platform',
-      description: 'Built for companies with high turnover rates, especially remote teams. Tracks birthdays, milestones, and key moments — generates a personalized celebration website with colleagues\' messages and gift card options.',
-      techStack: ['Web Platform', 'Fly.io', 'Personalized Pages'],
-      links: [
-        { text: 'View Site', url: 'https://employee-gifting-mvp.fly.dev', primary: true }
-      ],
-      icon: '🏆'
-    },
-    'gold-habit-tracker': {
-      category: 'Mobile App',
-      title: 'Gold Habit Tracker',
-      description: 'A habit tracking app with a twist: a gold-based reward and punishment system. Miss a workout? Buy gold. Hit a goal? Sell gold. Features a Kanban board, a workout logger, and a gold economy. Built for myself, used daily.',
-      techStack: ['React Native', 'Kanban Board', 'Workout Logger', 'Gold Economy'],
-      links: [],
-      icon: '💰'
+      icon: '\uD83E\uDDE0'
     }
   };
 
@@ -423,10 +422,15 @@
     data.links.forEach(function (link) {
       var a = document.createElement('a');
       a.href = link.url;
-      a.textContent = link.text;
       a.target = '_blank';
       a.rel = 'noopener';
       a.className = link.primary ? 'btn btn--primary' : 'btn btn--outline';
+      if (link.github) {
+        a.classList.add('btn--github');
+        a.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>' + link.text;
+      } else {
+        a.textContent = link.text;
+      }
       mLinks.appendChild(a);
     });
 
@@ -457,13 +461,10 @@
     document.body.style.overflow = '';
   }
 
-  // Event Listeners for Project Cards and Showcases
-  var clickables = document.querySelectorAll('.project-card[data-id], .showcase[data-id]');
+  // Event Listeners for Project Cards
+  var clickables = document.querySelectorAll('.project-card[data-id]');
   clickables.forEach(function (el) {
-    el.addEventListener('click', function (e) {
-      // Check if card is currently being dragged (if drag functionality exists)
-      if (el.classList.contains('is-dragging')) return;
-
+    el.addEventListener('click', function () {
       openModal(el.getAttribute('data-id'));
     });
   });
