@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christian Bakos Leirv&aring;g — Fullstack Developer</title>
-  <meta name="description" content="Christian Bakos Leirv&aring;g — fullstack developer and data consultant who builds and ships real products. Currently consulting at Capgemini, looking for founding engineering roles." />
+  <title>Christian Bakos Leirv&aring;g — Builder &amp; Engineer</title>
+  <meta name="description"
+    content="Christian Bakos Leirv&aring;g — builder and engineer who ships real products. Currently consulting at Capgemini, looking for founding engineering roles at early-stage startups." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
   <!-- ======== NAV ======== -->
@@ -31,10 +35,10 @@
 
   <!-- ======== HERO ======== -->
   <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero__badge">Available for founding roles</div>
+    <canvas id="hero-grid"></canvas>
+    <div class="hero__content">
       <h1 class="hero__name">Christian Bakos Leirv&aring;g</h1>
-      <h2 class="hero__tagline">I build and ship products people actually use.</h2>
+      <h2 class="hero__tagline" id="typing-target" data-text="I build and ship software."></h2>
       <p class="hero__description">
         Fullstack developer currently consulting at <strong>Capgemini</strong>, delivering
         end-to-end data solutions for clients like ConocoPhillips. MSc in Data Science from DTU.
@@ -45,16 +49,77 @@
         <a href="#solutions" class="btn btn--primary">See what I've built</a>
         <a href="#contact" class="btn btn--outline">Get in touch</a>
       </div>
-      <div class="hero__stack">
-        <span>Next.js</span>
-        <span>TypeScript</span>
-        <span>React Native</span>
-        <span>Python</span>
-        <span>PostgreSQL</span>
-        <span>Azure</span>
-        <span>AI/LLMs</span>
-        <span>Snowflake</span>
+      <div class="hero__logos">
+        <p class="hero__tech-label">Technical Stack</p>
+        <div class="logos-slide">
+          <!-- Set 1 -->
+          <img src="https://cdn.simpleicons.org/nextdotjs/white" alt="Next.js" title="Next.js" />
+          <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" title="Python" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftazure.svg" alt="Azure" title="Azure"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" title="React" />
+          <img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="Snowflake" title="Snowflake" />
+          <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" title="TypeScript" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="OpenAI" title="AI/LLMs"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" title="Tailwind CSS" />
+          <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" title="PostgreSQL" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoft.svg" alt="Microsoft Fabric"
+            title="Microsoft Fabric" style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" title="Docker" />
+          <img src="https://cdn.simpleicons.org/pandas/white" alt="Pandas" title="Pandas" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/powerbi.svg" alt="Power BI" title="Power BI"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" title="GitHub" />
+          <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-learn" title="Scikit-learn" />
+          <img src="https://cdn.simpleicons.org/cursor/white" alt="Cursor" title="Cursor" />
+          <img src="https://cdn.simpleicons.org/anthropic/white" alt="Claude" title="Claude" />
+          <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" title=".NET" />
+          <img src="https://cdn.simpleicons.org/flydotio/white" alt="Fly.io" title="Fly.io" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/csharp.svg" alt="C#" title="C#"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" title="Supabase" />
+          <img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira" title="Jira" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftsqlserver.svg" alt="SQL Server"
+            title="SQL" style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud" title="Google Cloud" />
+          <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" title="PyTorch" />
+
+          <!-- Set 2 (Duplicate for infinite scroll) -->
+          <img src="https://cdn.simpleicons.org/nextdotjs/white" alt="Next.js" />
+          <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftazure.svg" alt="Azure"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" />
+          <img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="Snowflake" />
+          <img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="OpenAI"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" alt="Tailwind CSS" />
+          <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoft.svg" alt="Microsoft Fabric"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" />
+          <img src="https://cdn.simpleicons.org/pandas/white" alt="Pandas" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/powerbi.svg" alt="Power BI"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" />
+          <img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-learn" />
+          <img src="https://cdn.simpleicons.org/cursor/white" alt="Cursor" />
+          <img src="https://cdn.simpleicons.org/anthropic/white" alt="Claude" />
+          <img src="https://cdn.simpleicons.org/dotnet/512BD4" alt=".NET" />
+          <img src="https://cdn.simpleicons.org/flydotio/white" alt="Fly.io" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/csharp.svg" alt="C#"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" />
+          <img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira" />
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/microsoftsqlserver.svg" alt="SQL Server"
+            style="filter: invert(1);" />
+          <img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="Google Cloud" />
+          <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" />
+        </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -63,12 +128,15 @@
     <div class="container">
       <h2 class="section__title">About me</h2>
       <div class="about__content fade-in">
+        <div class="about__image">
+          <img src="img/profile.jpg" alt="Christian Bakos Leirv&aring;g">
+        </div>
         <div class="about__text">
           <p>
             I studied at the <strong>Technical University of Denmark (DTU)</strong>,
-            where I got my MSc in Data Science, and have a BSc in Computer Engineering
+            where I got my MSc in Data Science, and have a BSc in Computer Science
             from the University of Stavanger. What drives me is
-            <strong>shipping things that work</strong>.
+            <strong>solving problems</strong>.
           </p>
           <p>
             By day I consult at <strong>Capgemini</strong>, where I&rsquo;ve delivered
@@ -86,29 +154,29 @@
           <div class="trait">
             <div class="trait__icon">&#9889;</div>
             <div>
-              <h3 class="trait__title">Ship fast</h3>
-              <p class="trait__text">From idea to production. No overengineering.</p>
+              <h3 class="trait__title">Build Measure Learn</h3>
+              <p class="trait__text">Iterating quickly using feedback loops.</p>
             </div>
           </div>
           <div class="trait">
             <div class="trait__icon">&#128736;</div>
             <div>
               <h3 class="trait__title">Fullstack</h3>
-              <p class="trait__text">Frontend, backend, data, infra. The whole loop.</p>
+              <p class="trait__text">Frontend, Backend, Data Scientist, Data Engineer.</p>
             </div>
           </div>
           <div class="trait">
             <div class="trait__icon">&#129302;</div>
             <div>
-              <h3 class="trait__title">AI-native</h3>
-              <p class="trait__text">LLM fine-tuning, NLP, prompt engineering. Daily.</p>
+              <h3 class="trait__title">Data Science</h3>
+              <p class="trait__text">LLM fine-tuning, NLP, knowledge graphs, modelling.</p>
             </div>
           </div>
           <div class="trait">
             <div class="trait__icon">&#128101;</div>
             <div>
-              <h3 class="trait__title">User-tested</h3>
-              <p class="trait__text">Every product tested with real people, iterated.</p>
+              <h3 class="trait__title">Test Driven</h3>
+              <p class="trait__text">Following test driven design principles.</p>
             </div>
           </div>
         </div>
@@ -119,159 +187,59 @@
   <!-- ======== SOLUTIONS ======== -->
   <section class="section section--alt" id="solutions">
     <div class="container">
-      <h2 class="section__title">Solutions I've built</h2>
-      <p class="section__subtitle">Real products, real users, real impact.</p>
-    </div>
+      <h2 class="section__title">Featured Projects</h2>
+      <p class="section__subtitle">Selected work from my portfolio. See all projects below.</p>
 
-    <!-- Solution 1: D&D Character Builder -->
-    <div class="container container--wide">
-      <article class="showcase fade-in">
-        <div class="showcase__preview">
-          <div class="showcase__browser">
-            <div class="browser__bar">
-              <span class="browser__dot"></span>
-              <span class="browser__dot"></span>
-              <span class="browser__dot"></span>
-              <span class="browser__url">dnd-creator.fly.dev</span>
-            </div>
-            <iframe src="https://dnd-creator.fly.dev" class="showcase__iframe" loading="lazy" sandbox="allow-scripts allow-same-origin" title="D&amp;D Character Builder preview"></iframe>
-          </div>
-        </div>
-        <div class="showcase__info">
-          <div class="showcase__badges">
-            <span class="showcase__badge">Web App</span>
-            <span class="showcase__badge showcase__badge--accent">7 iterations</span>
-          </div>
-          <h3 class="showcase__title">D&amp;D Character Builder</h3>
-          <p class="showcase__desc">
-            A streamlined tool for creating Dungeons &amp; Dragons characters.
-            Built because existing tools were slow and clunky. Through
-            <strong>7 iterations</strong> and testing with <strong>20+ users</strong>,
-            it's a fast, intuitive experience that outperforms alternatives.
+      <div class="projects-grid">
+        <!-- Solution 1: D&D Character Builder -->
+        <article class="project-card fade-in" data-id="dnd-builder">
+          <p class="project-card__label">Web App</p>
+          <h3 class="project-card__title">D&amp;D Character Builder</h3>
+          <p class="project-card__description">
+            A streamlined tool for creating Dungeons &amp; Dragons characters. Faster and more intuitive than existing
+            tools.
           </p>
-          <div class="showcase__stats">
-            <div class="stat">
-              <span class="stat__number">7</span>
-              <span class="stat__label">Iterations</span>
-            </div>
-            <div class="stat">
-              <span class="stat__number">20+</span>
-              <span class="stat__label">Users tested</span>
-            </div>
-            <div class="stat stat--highlight">
-              <span class="stat__number">Faster</span>
-              <span class="stat__label">Than alternatives</span>
-            </div>
-          </div>
-          <ul class="showcase__tech">
+          <ul class="project-card__tech">
             <li>Web App</li>
             <li>Fly.io</li>
-            <li>User Tested</li>
           </ul>
-          <div class="showcase__cta">
-            <a href="https://dnd-creator.fly.dev" target="_blank" rel="noopener" class="btn btn--primary">Try it live &rarr;</a>
+          <div class="project-card__links">
+            <span class="btn-text">View Details &rarr;</span>
           </div>
-        </div>
-      </article>
-    </div>
+        </article>
 
-    <!-- Solution 2: Employee Recognition Platform -->
-    <div class="container container--wide">
-      <article class="showcase showcase--reverse fade-in">
-        <div class="showcase__preview">
-          <div class="showcase__browser">
-            <div class="browser__bar">
-              <span class="browser__dot"></span>
-              <span class="browser__dot"></span>
-              <span class="browser__dot"></span>
-              <span class="browser__url">employee-gifting-mvp.fly.dev</span>
-            </div>
-            <iframe src="https://employee-gifting-mvp.fly.dev" class="showcase__iframe" loading="lazy" sandbox="allow-scripts allow-same-origin" title="Employee Recognition Platform preview"></iframe>
-          </div>
-        </div>
-        <div class="showcase__info">
-          <div class="showcase__badges">
-            <span class="showcase__badge">SaaS MVP</span>
-            <span class="showcase__badge showcase__badge--accent">Employee retention</span>
-          </div>
-          <h3 class="showcase__title">Employee Recognition Platform</h3>
-          <p class="showcase__desc">
-            Built for companies with <strong>high turnover rates</strong>,
-            especially remote teams. Tracks birthdays, milestones, and key moments
-            &mdash; generates a <strong>personalized celebration website</strong>
-            with colleagues' messages and gift card options.
+        <!-- Solution 2: Employee Recognition Platform -->
+        <article class="project-card fade-in" data-id="employee-recognition">
+          <p class="project-card__label">SaaS MVP</p>
+          <h3 class="project-card__title">Employee Recognition Platform</h3>
+          <p class="project-card__description">
+            Personalized celebration websites for remote teams to track birthdays and milestones.
           </p>
-          <div class="showcase__pills">
-            <span class="pill">Tracks birthdays &amp; milestones</span>
-            <span class="pill">Collects team feedback</span>
-            <span class="pill">Personalized celebration page</span>
-            <span class="pill">Gift card integration</span>
-          </div>
-          <ul class="showcase__tech">
+          <ul class="project-card__tech">
             <li>Web Platform</li>
             <li>Fly.io</li>
-            <li>Personalized Pages</li>
           </ul>
-          <div class="showcase__cta">
-            <a href="https://employee-gifting-mvp.fly.dev" target="_blank" rel="noopener" class="btn btn--primary">View demo &rarr;</a>
+          <div class="project-card__links">
+            <span class="btn-text">View Details &rarr;</span>
           </div>
-        </div>
-      </article>
-    </div>
+        </article>
 
-    <!-- Solution 3: Gold Habit Tracker -->
-    <div class="container container--wide">
-      <article class="showcase fade-in">
-        <div class="showcase__preview showcase__preview--app">
-          <div class="showcase__phone">
-            <div class="phone__notch"></div>
-            <div class="phone__screen">
-              <div class="phone__header">Gold Habit Tracker</div>
-              <div class="phone__content">
-                <div class="phone__stats">
-                  <div class="phone__stat"><span class="phone__stat-val">4.2g</span><span class="phone__stat-lbl">Gold owned</span></div>
-                  <div class="phone__stat"><span class="phone__stat-val">12</span><span class="phone__stat-lbl">Day streak</span></div>
-                </div>
-                <div class="phone__task phone__task--done">Morning run</div>
-                <div class="phone__task phone__task--done">Read 20 pages</div>
-                <div class="phone__task">Evening workout</div>
-                <div class="phone__task">Journal entry</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="showcase__info">
-          <div class="showcase__badges">
-            <span class="showcase__badge">Mobile App</span>
-            <span class="showcase__badge showcase__badge--accent">React Native</span>
-          </div>
-          <h3 class="showcase__title">Gold Habit Tracker</h3>
-          <p class="showcase__desc">
-            A habit tracking app with a twist: a <strong>gold-based reward
-            and punishment system</strong>. Miss a workout? Buy gold.
-            Hit a goal? Sell gold. Features a <strong>Kanban board</strong>,
-            a <strong>workout logger</strong>, and a gold economy. Built for myself, used daily.
+        <!-- Solution 3: Gold Habit Tracker -->
+        <article class="project-card fade-in" data-id="gold-habit-tracker">
+          <p class="project-card__label">Mobile App</p>
+          <h3 class="project-card__title">Gold Habit Tracker</h3>
+          <p class="project-card__description">
+            Habit tracking app with a gold-based economy system. Gamified self-improvement.
           </p>
-          <div class="showcase__rules">
-            <div class="rule rule--penalty">
-              <span class="rule__label">Miss workout</span>
-              <span class="rule__arrow">&rarr;</span>
-              <span class="rule__result">Buy gold</span>
-            </div>
-            <div class="rule rule--reward">
-              <span class="rule__label">Reach a goal</span>
-              <span class="rule__arrow">&rarr;</span>
-              <span class="rule__result">Sell gold</span>
-            </div>
-          </div>
-          <ul class="showcase__tech">
+          <ul class="project-card__tech">
             <li>React Native</li>
-            <li>Kanban Board</li>
-            <li>Workout Logger</li>
-            <li>Gold Economy</li>
+            <li>Mobile</li>
           </ul>
-        </div>
-      </article>
+          <div class="project-card__links">
+            <span class="btn-text">View Details &rarr;</span>
+          </div>
+        </article>
+      </div>
     </div>
 
   </section>
@@ -441,8 +409,10 @@
       <div class="experience-footer fade-in">
         <div class="experience-footer__group">
           <h3 class="experience-footer__title">Education</h3>
-          <p class="experience-footer__item"><strong>MSc Human-Centered AI (Data Science)</strong> &mdash; DTU, 2022&ndash;2024</p>
-          <p class="experience-footer__item"><strong>BSc Computer Science</strong> &mdash; University of Stavanger, 2019&ndash;2022</p>
+          <p class="experience-footer__item"><strong>MSc Human-Centered AI (Data Science)</strong> &mdash; DTU,
+            2022&ndash;2024</p>
+          <p class="experience-footer__item"><strong>BSc Computer Science</strong> &mdash; University of Stavanger,
+            2019&ndash;2022</p>
         </div>
         <div class="experience-footer__group">
           <h3 class="experience-footer__title">Certifications</h3>
@@ -461,11 +431,11 @@
   <section class="section" id="projects">
     <div class="container">
       <h2 class="section__title">Other projects</h2>
-      <p class="section__subtitle">University research and explorations. Drag to rearrange on desktop.</p>
+      <p class="section__subtitle">University research and explorations.</p>
 
       <div class="projects-grid" id="projects-grid">
 
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-id="gender-disparities">
           <p class="project-card__label">Data Analysis</p>
           <h3 class="project-card__title">Gender Disparities in Denmark</h3>
           <p class="project-card__description">
@@ -478,12 +448,11 @@
             <li>Plotly</li>
           </ul>
           <div class="project-card__links">
-            <a href="projects/gender-disparities.html">Analysis &rarr;</a>
-            <a href="https://github.com/bakos97/bakos97.github.io" target="_blank" rel="noopener">GitHub &rarr;</a>
+            <span class="btn-text">View Details &rarr;</span>
           </div>
         </article>
 
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-id="randaberg-sauna">
           <p class="project-card__label">Web App</p>
           <h3 class="project-card__title">Randaberg Sauna</h3>
           <p class="project-card__description">
@@ -494,11 +463,11 @@
             <li>Fly.io</li>
           </ul>
           <div class="project-card__links">
-            <a href="https://randaberg-sauna.fly.dev" target="_blank" rel="noopener">Live Site &rarr;</a>
+            <span class="btn-text">View Details &rarr;</span>
           </div>
         </article>
 
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-id="music-network">
           <p class="project-card__label">Social Graphs</p>
           <h3 class="project-card__title">Music Network Analysis</h3>
           <p class="project-card__description">
@@ -510,11 +479,11 @@
             <li>NetworkX</li>
           </ul>
           <div class="project-card__links">
-            <a href="https://github.com/bakos97/Final-project-Social-Graphs" target="_blank" rel="noopener">GitHub &rarr;</a>
+            <span class="btn-text">View Details &rarr;</span>
           </div>
         </article>
 
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-id="xray-segmentation">
           <p class="project-card__label">Deep Learning</p>
           <h3 class="project-card__title">X-Ray Image Segmentation</h3>
           <p class="project-card__description">
@@ -525,11 +494,11 @@
             <li>UNet</li>
           </ul>
           <div class="project-card__links">
-            <a href="https://github.com/bakos97/AIStudentProjects" target="_blank" rel="noopener">GitHub &rarr;</a>
+            <span class="btn-text">View Details &rarr;</span>
           </div>
         </article>
 
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-id="heart-failure">
           <p class="project-card__label">Machine Learning</p>
           <h3 class="project-card__title">Heart Failure Prediction</h3>
           <p class="project-card__description">
@@ -540,11 +509,11 @@
             <li>Jupyter</li>
           </ul>
           <div class="project-card__links">
-            <a href="https://github.com/bakos97/Machine-learning-assignment-2" target="_blank" rel="noopener">GitHub &rarr;</a>
+            <span class="btn-text">View Details &rarr;</span>
           </div>
         </article>
 
-        <article class="project-card fade-in">
+        <article class="project-card fade-in" data-id="face-perception">
           <p class="project-card__label">Cognitive Science</p>
           <h3 class="project-card__title">Face Perception Modelling</h3>
           <p class="project-card__description">
@@ -555,7 +524,7 @@
             <li>Cognitive Modelling</li>
           </ul>
           <div class="project-card__links">
-            <a href="https://github.com/bakos97/Cognitive-Modelling-Homework-2-Modelling-of-face-perception" target="_blank" rel="noopener">GitHub &rarr;</a>
+            <span class="btn-text">View Details &rarr;</span>
           </div>
         </article>
 
@@ -585,6 +554,35 @@
     </div>
   </footer>
 
+  <div class="modal" id="project-modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-close="true"></div>
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <button class="modal__close" aria-label="Close modal" data-close="true"></button>
+      <div class="modal__content">
+        <div class="modal__image-wrapper" id="modal-image-wrapper">
+          <!-- Image injected via JS -->
+        </div>
+        <div class="modal__body">
+          <div class="modal__header">
+            <span class="modal__tag" id="modal-tag">Category</span>
+            <h3 class="modal__title" id="modal-title">Project Title</h3>
+          </div>
+          <p class="modal__description" id="modal-description">Project description goes here.</p>
+          <div class="modal__tech-stack">
+            <h4 class="modal__subtitle">Tech Stack</h4>
+            <ul class="modal__tech-list" id="modal-tech">
+              <!-- Tech items injected via JS -->
+            </ul>
+          </div>
+          <div class="modal__actions" id="modal-links">
+            <!-- Links injected via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(sort:*)",
+      "Bash(claude plugin install frontend-design)",
+      "WebFetch(domain:portfolio.lewishadden.com)"
+    ]
+  }
+}
