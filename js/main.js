@@ -345,7 +345,7 @@
       links: [
         { text: 'Live Site', url: 'https://randaberg-sauna.fly.dev', primary: true }
       ],
-      image: 'assets/screenshots/bastue.png',
+      image: 'assets/screenshots/badstue.png',
       icon: '\uD83E\uDDD6\u200D\u2642\uFE0F'
     },
     'music-network': {
