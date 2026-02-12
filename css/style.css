@@ -1375,6 +1375,47 @@ strong {
 }
 
 /* ============================================
+   FEATURED GRID (own row above filters)
+   ============================================ */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.featured-grid .project-card--featured {
+  border-color: rgba(185, 103, 255, 0.15);
+  background: linear-gradient(165deg, rgba(185, 103, 255, 0.04), var(--color-surface) 40%);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2), 0 0 20px rgba(185, 103, 255, 0.04);
+}
+
+.featured-grid .project-card--featured::before {
+  height: 3px;
+}
+
+.featured-grid .project-card--featured:hover {
+  border-color: rgba(185, 103, 255, 0.35);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(185, 103, 255, 0.08);
+}
+
+.featured-grid .project-card__image {
+  height: 200px;
+}
+
+.featured-grid .project-card__title {
+  font-size: 1.15rem;
+}
+
+.section__title--sub {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/* ============================================
    FILTER CONTROLS
    ============================================ */
 .projects-filter {
@@ -1829,6 +1870,12 @@ strong {
     transform: none;
     box-shadow: none;
     border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
   }
 
   .projects-filter {

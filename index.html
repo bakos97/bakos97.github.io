@@ -189,22 +189,10 @@
       <h2 class="section__title">Projects</h2>
       <p class="section__subtitle">Products I've built, research I've done, and things I've shipped.</p>
 
-      <div class="projects-filter">
-        <div class="projects-filter__categories">
-          <button class="projects-filter__btn projects-filter__btn--active" data-filter="all">All</button>
-          <button class="projects-filter__btn" data-filter="web-app">Web App</button>
-          <button class="projects-filter__btn" data-filter="mobile">Mobile</button>
-          <button class="projects-filter__btn" data-filter="data-analysis">Data Analysis</button>
-          <button class="projects-filter__btn" data-filter="ml-ai">ML / AI</button>
-        </div>
-        <input type="text" class="projects-filter__search" placeholder="Search projects..." />
-      </div>
+      <!-- Featured Projects -->
+      <div class="featured-grid">
 
-      <div class="projects-grid" id="projects-grid">
-
-        <!-- 1. D&D Character Builder — Featured -->
-        <article class="project-card project-card--featured fade-in" data-id="dnd-builder" data-category="web-app"
-          data-search="dnd dungeons dragons character builder next.js nextjs react supabase gpt-4 llm fly.io web app">
+        <article class="project-card project-card--featured fade-in" data-id="dnd-builder">
           <div class="project-card__image">
             <img src="assets/screenshots/dnd.png" alt="D&amp;D Character Builder screenshot"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#128009;</div>'">
@@ -230,9 +218,7 @@
           </div>
         </article>
 
-        <!-- 2. Hyllest — Featured -->
-        <article class="project-card project-card--featured fade-in" data-id="hyllest" data-category="web-app"
-          data-search="hyllest employee recognition saas mvp celebration birthday milestone fly.io supabase web platform personalized">
+        <article class="project-card project-card--featured fade-in" data-id="hyllest">
           <div class="project-card__image">
             <img src="assets/screenshots/Hyllest.png" alt="Hyllest screenshot"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#127942;</div>'">
@@ -256,9 +242,31 @@
           </div>
         </article>
 
-        <!-- 3. Gold Habit Tracker — Featured -->
-        <article class="project-card project-card--featured fade-in" data-id="gold-habit-tracker" data-category="mobile"
-          data-search="goald gold goal habit tracker react native expo typescript mobile app gamified">
+        <article class="project-card project-card--featured fade-in" data-id="randaberg-sauna">
+          <div class="project-card__image">
+            <img src="assets/screenshots/badstue.png" alt="Randaberg Sauna screenshot"
+              onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#129494;&#8205;&#9794;&#65039;</div>'">
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__featured-badge">&#9733; Featured</span>
+            <span class="project-card__maturity project-card__maturity--live"><span class="maturity-dot"></span> Live</span>
+          </div>
+          <p class="project-card__label">Web App</p>
+          <h3 class="project-card__title">Randaberg Sauna</h3>
+          <p class="project-card__description">
+            Website built for a local sauna business.
+          </p>
+          <ul class="project-card__tech">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>Fly.io</li>
+          </ul>
+          <div class="project-card__links">
+            <span class="btn-text">View Details &rarr;</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--featured fade-in" data-id="gold-habit-tracker">
           <div class="project-card__image">
             <div class="project-card__image-icon">&#128176;</div>
           </div>
@@ -281,7 +289,25 @@
           </div>
         </article>
 
-        <!-- 4. Gender Disparities -->
+      </div>
+
+      <!-- Other Projects -->
+      <h3 class="section__title section__title--sub">Other Projects</h3>
+
+      <div class="projects-filter">
+        <div class="projects-filter__categories">
+          <button class="projects-filter__btn projects-filter__btn--active" data-filter="all">All</button>
+          <button class="projects-filter__btn" data-filter="web-app">Web App</button>
+          <button class="projects-filter__btn" data-filter="mobile">Mobile</button>
+          <button class="projects-filter__btn" data-filter="data-analysis">Data Analysis</button>
+          <button class="projects-filter__btn" data-filter="ml-ai">ML / AI</button>
+        </div>
+        <input type="text" class="projects-filter__search" placeholder="Search projects..." />
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- 1. Gender Disparities -->
         <article class="project-card fade-in" data-id="gender-disparities" data-category="data-analysis"
           data-search="gender disparities denmark income parental leave education python pandas plotly jupyter notebook data analysis">
           <div class="project-card__image">
@@ -305,32 +331,7 @@
           </div>
         </article>
 
-        <!-- 5. Randaberg Sauna -->
-        <article class="project-card fade-in" data-id="randaberg-sauna" data-category="web-app"
-          data-search="randaberg sauna website html css javascript fly.io web app business">
-          <div class="project-card__image">
-            <img src="assets/screenshots/badstue.png" alt="Randaberg Sauna screenshot"
-              onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#129494;&#8205;&#9794;&#65039;</div>'">
-          </div>
-          <div class="project-card__meta">
-            <span class="project-card__maturity project-card__maturity--live"><span class="maturity-dot"></span> Live</span>
-          </div>
-          <p class="project-card__label">Web App</p>
-          <h3 class="project-card__title">Randaberg Sauna</h3>
-          <p class="project-card__description">
-            Website built for a local sauna business.
-          </p>
-          <ul class="project-card__tech">
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>Fly.io</li>
-          </ul>
-          <div class="project-card__links">
-            <span class="btn-text">View Details &rarr;</span>
-          </div>
-        </article>
-
-        <!-- 6. Music Network Analysis -->
+        <!-- 2. Music Network Analysis -->
         <article class="project-card fade-in" data-id="music-network" data-category="data-analysis"
           data-search="music network analysis spotify social graphs python networkx data visualization">
           <div class="project-card__image">
