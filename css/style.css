@@ -252,7 +252,9 @@ strong {
   padding: 2rem 0;
   white-space: nowrap;
   position: relative;
+  width: 100%;
   max-width: 1000px;
+  /* Keep desktop max-width */
   margin: 0 auto;
 
   /* Fading edges */
