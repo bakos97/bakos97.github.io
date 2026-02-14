@@ -211,6 +211,23 @@ strong {
   padding: 0 1.5rem;
 }
 
+.hero__avatar {
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.5s 0.05s forwards;
+}
+
+.hero__avatar img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  border: 3px solid var(--color-surface);
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.25), 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
 .hero__name {
   font-size: clamp(2.2rem, 6vw, 3.5rem);
   font-weight: 800;
@@ -366,30 +383,10 @@ strong {
   align-items: start;
 }
 
-.about__image {
-  grid-column: span 2;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.about__image img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--color-surface);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
 @media (max-width: 768px) {
   .about__content {
     grid-template-columns: 1fr;
     gap: 2rem;
-  }
-
-  .about__image {
-    grid-column: span 1;
   }
 }
 

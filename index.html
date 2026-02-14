@@ -36,6 +36,9 @@
   <section class="hero" id="hero">
     <canvas id="hero-grid"></canvas>
     <div class="hero__content">
+      <div class="hero__avatar">
+        <img src="img/profile.jpg" alt="Christian Bakos Leirv&aring;g">
+      </div>
       <h1 class="hero__name">Christian Bakos Leirv&aring;g</h1>
       <h2 class="hero__tagline" id="typing-target" data-text="I build and ship software."></h2>
       <p class="hero__description">
@@ -127,9 +130,6 @@
     <div class="container">
       <h2 class="section__title">About me</h2>
       <div class="about__content fade-in">
-        <div class="about__image">
-          <img src="img/profile.jpg" alt="Christian Bakos Leirv&aring;g">
-        </div>
         <div class="about__text">
           <p>
             I studied at the <strong>Technical University of Denmark (DTU)</strong>,
@@ -186,16 +186,15 @@
   <!-- ======== PROJECTS ======== -->
   <section class="section section--alt" id="projects">
     <div class="container">
-      <h2 class="section__title">Projects</h2>
-      <p class="section__subtitle">Products I've built, research I've done, and things I've shipped.</p>
+      <h2 class="section__title">Side Projects</h2>
+      <p class="section__subtitle">Products I've built on my own time &mdash; from idea to production.</p>
 
       <div class="projects-filter">
         <div class="projects-filter__categories">
           <button class="projects-filter__btn projects-filter__btn--active" data-filter="all">All</button>
           <button class="projects-filter__btn" data-filter="web-app">Web App</button>
           <button class="projects-filter__btn" data-filter="mobile">Mobile</button>
-          <button class="projects-filter__btn" data-filter="data-analysis">Data Analysis</button>
-          <button class="projects-filter__btn" data-filter="ml-ai">ML / AI</button>
+          <button class="projects-filter__btn" data-filter="research">University Research</button>
         </div>
         <input type="text" class="projects-filter__search" placeholder="Search projects..." />
       </div>
@@ -308,13 +307,13 @@
         </article>
 
         <!-- 5. Gender Disparities -->
-        <article class="project-card fade-in" data-id="gender-disparities" data-category="data-analysis"
+        <article class="project-card fade-in" data-id="gender-disparities" data-category="research"
           data-search="gender disparities denmark income parental leave education python pandas plotly jupyter notebook data analysis">
           <div class="project-card__image">
             <img src="gender_education2.png" alt="Gender Disparities visualization"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#128202;</div>'">
           </div>
-          <p class="project-card__label">Data Analysis</p>
+          <p class="project-card__label">University Research</p>
           <h3 class="project-card__title">Gender Disparities in Denmark</h3>
           <p class="project-card__description">
             In-depth analysis of gender gaps in income, parental leave, and education
@@ -332,13 +331,13 @@
         </article>
 
         <!-- 2. Music Network Analysis -->
-        <article class="project-card fade-in" data-id="music-network" data-category="data-analysis"
+        <article class="project-card fade-in" data-id="music-network" data-category="research"
           data-search="music network analysis spotify social graphs python networkx data visualization">
           <div class="project-card__image">
             <img src="assets/screenshots/music-network.png" alt="Music Network Analysis screenshot"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#127925;</div>'">
           </div>
-          <p class="project-card__label">Social Graphs</p>
+          <p class="project-card__label">University Research</p>
           <h3 class="project-card__title">Music Network Analysis</h3>
           <p class="project-card__description">
             Analysed Spotify data to uncover network structures between artists
@@ -355,13 +354,13 @@
         </article>
 
         <!-- 7. X-Ray Image Segmentation -->
-        <article class="project-card fade-in" data-id="xray-segmentation" data-category="ml-ai"
+        <article class="project-card fade-in" data-id="xray-segmentation" data-category="research"
           data-search="xray x-ray image segmentation deep learning pytorch unet vggnet computer vision python">
           <div class="project-card__image">
             <img src="assets/screenshots/xray-segmentation.png" alt="X-Ray Segmentation screenshot"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#129516;</div>'">
           </div>
-          <p class="project-card__label">Deep Learning</p>
+          <p class="project-card__label">University Research</p>
           <h3 class="project-card__title">X-Ray Image Segmentation</h3>
           <p class="project-card__description">
             Automated segmentation of ptychographic X-ray images using UNet and VGGnet.
@@ -378,13 +377,13 @@
         </article>
 
         <!-- 8. Heart Failure Prediction -->
-        <article class="project-card fade-in" data-id="heart-failure" data-category="ml-ai"
+        <article class="project-card fade-in" data-id="heart-failure" data-category="research"
           data-search="heart failure prediction machine learning scikit-learn sklearn python pandas matplotlib classification">
           <div class="project-card__image">
             <img src="assets/screenshots/heart-failure.png" alt="Heart Failure Prediction screenshot"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#10084;&#65039;</div>'">
           </div>
-          <p class="project-card__label">Machine Learning</p>
+          <p class="project-card__label">University Research</p>
           <h3 class="project-card__title">Heart Failure Prediction</h3>
           <p class="project-card__description">
             ML models for predicting patient outcomes from clinical heart failure records.
@@ -400,13 +399,13 @@
         </article>
 
         <!-- 9. Face Perception Modelling -->
-        <article class="project-card fade-in" data-id="face-perception" data-category="ml-ai"
+        <article class="project-card fade-in" data-id="face-perception" data-category="research"
           data-search="face perception modelling cognitive science python computational data analysis">
           <div class="project-card__image">
             <img src="assets/screenshots/face-perception.png" alt="Face Perception Modelling screenshot"
               onerror="this.parentElement.innerHTML='<div class=\'project-card__image-icon\'>&#129504;</div>'">
           </div>
-          <p class="project-card__label">Cognitive Science</p>
+          <p class="project-card__label">University Research</p>
           <h3 class="project-card__title">Face Perception Modelling</h3>
           <p class="project-card__description">
             Computational modelling of human face perception using cognitive science methods.
@@ -428,8 +427,8 @@
   <!-- ======== EXPERIENCE ======== -->
   <section class="section" id="experience">
     <div class="container">
-      <h2 class="section__title">Professional background</h2>
-      <p class="section__subtitle">Where I've shipped products professionally.</p>
+      <h2 class="section__title">Career &amp; Education</h2>
+      <p class="section__subtitle">Paid work, research positions, and academic projects at companies and universities.</p>
 
       <div class="timeline">
 
@@ -509,31 +508,6 @@
               <li>Python</li>
               <li>PyTorch</li>
               <li>UNET</li>
-            </ul>
-          </div>
-        </article>
-
-        <!-- DTU LLM D&D -->
-        <article class="timeline__item fade-in">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <div class="timeline__header">
-              <div>
-                <h3 class="timeline__title">AI-Driven D&amp;D Platform &mdash; DTU Compute</h3>
-                <p class="timeline__role">Project Lead / Developer</p>
-              </div>
-              <span class="timeline__date">Jan 2024 &ndash; Jun 2024</span>
-            </div>
-            <p class="timeline__desc">
-              Led full development cycle: research, Figma prototypes, GPT-3 fine-tuning,
-              front-end &amp; back-end implementation. Iteratively developed with
-              user feedback using the Double Diamond process.
-            </p>
-            <ul class="timeline__tech">
-              <li>Next.js</li>
-              <li>React</li>
-              <li>GPT-3</li>
-              <li>GitHub Actions</li>
             </ul>
           </div>
         </article>
