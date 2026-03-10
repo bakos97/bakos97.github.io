@@ -348,6 +348,26 @@
       image: 'assets/screenshots/badstue.png',
       icon: '\uD83E\uDDD6\u200D\u2642\uFE0F'
     },
+    'rebil-dashboard': {
+      category: 'Web App',
+      title: 'Rebil Dashboard',
+      description: 'A live production dashboard for Rebil focused on giving a clear overview of key product and business data. Built and shipped as a full-stack web app and deployed on Fly.io.',
+      techStack: ['Full-Stack Web', 'Dashboard UX', 'Fly.io'],
+      links: [
+        { text: 'Visit Site', url: 'https://rebil-dashboard.fly.dev', primary: true }
+      ],
+      icon: '\uD83D\uDCCA'
+    },
+    'hormuz': {
+      category: 'Web App',
+      title: 'Hormuz',
+      description: 'A live Fly.io-hosted web product that is part of my independent project portfolio. Designed and delivered as a production-ready full-stack application.',
+      techStack: ['Full-Stack Web', 'Product Engineering', 'Fly.io'],
+      links: [
+        { text: 'Visit Site', url: 'https://hormuz.fly.dev', primary: true }
+      ],
+      icon: '\uD83C\uDF10'
+    },
     'music-network': {
       category: 'Social Graphs',
       title: 'Music Network Analysis',
