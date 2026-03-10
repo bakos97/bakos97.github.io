@@ -424,7 +424,21 @@
   var mTech = document.getElementById('modal-tech');
   var mLinks = document.getElementById('modal-links');
 
+  function emitAgentLog(payload) {
+    if (!window.__portfolioDebugLogs) window.__portfolioDebugLogs = [];
+    window.__portfolioDebugLogs.push(payload);
+  }
+
   function openModal(id) {
+    // #region agent log
+    emitAgentLog({
+      hypothesisId: 'B',
+      location: 'js/main.js:openModal:entry',
+      message: 'openModal called',
+      data: { requestedId: id, hasProjectData: !!projectData[id] },
+      timestamp: Date.now()
+    });
+    // #endregion
     var data = projectData[id];
     if (!data) return;
 
@@ -478,6 +492,15 @@
     // Show Modal
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    // #region agent log
+    emitAgentLog({
+      hypothesisId: 'B',
+      location: 'js/main.js:openModal:exit',
+      message: 'modal rendered',
+      data: { renderedId: id, renderedTitle: mTitle.textContent },
+      timestamp: Date.now()
+    });
+    // #endregion
   }
 
   function closeModal() {
@@ -485,13 +508,66 @@
     document.body.style.overflow = '';
   }
 
-  // Event Listeners for Project Cards
-  var clickables = document.querySelectorAll('.project-card[data-id]');
-  clickables.forEach(function (el) {
-    el.addEventListener('click', function () {
-      openModal(el.getAttribute('data-id'));
+  // Event Listener for Project Cards (delegated)
+  function resolveCardFromPoint(clientX, clientY, fallbackCard) {
+    if (!projectsGrid || typeof clientX !== 'number' || typeof clientY !== 'number') return fallbackCard || null;
+
+    var candidates = [];
+    projectsGrid.querySelectorAll('.project-card[data-id]:not(.project-card--hidden)').forEach(function (card) {
+      var rect = card.getBoundingClientRect();
+      if (clientX >= rect.left && clientX <= rect.right && clientY >= rect.top && clientY <= rect.bottom) {
+        candidates.push({ card: card, top: rect.top, left: rect.left });
+      }
     });
-  });
+
+    if (!candidates.length) return fallbackCard || null;
+    candidates.sort(function (a, b) {
+      if (a.top !== b.top) return b.top - a.top; // Prefer lower row on overlap.
+      return b.left - a.left;
+    });
+    return candidates[0].card;
+  }
+
+  if (projectsGrid) {
+    projectsGrid.addEventListener('click', function (event) {
+      var targetCard = event.target && event.target.closest ? event.target.closest('.project-card[data-id]') : null;
+      var pointCard = resolveCardFromPoint(event.clientX, event.clientY, targetCard);
+      var chosenCard = pointCard || targetCard;
+      var chosenId = chosenCard ? chosenCard.getAttribute('data-id') : null;
+
+      // #region agent log
+      emitAgentLog({
+        hypothesisId: 'A',
+        location: 'js/main.js:cardClick:entry',
+        message: 'project card click captured',
+        data: {
+          targetCardId: targetCard ? targetCard.getAttribute('data-id') : null,
+          pointCardId: pointCard ? pointCard.getAttribute('data-id') : null,
+          chosenId: chosenId,
+          targetTag: event.target && event.target.tagName ? event.target.tagName : null,
+          targetClass: event.target && event.target.className ? String(event.target.className) : null
+        },
+        timestamp: Date.now()
+      });
+      // #endregion
+
+      // #region agent log
+      emitAgentLog({
+        hypothesisId: 'D',
+        location: 'js/main.js:cardClick:branch',
+        message: 'card resolution branch',
+        data: {
+          usedPointResolution: !!pointCard && pointCard !== targetCard,
+          hasChosenId: !!chosenId
+        },
+        timestamp: Date.now()
+      });
+      // #endregion
+
+      if (!chosenId) return;
+      openModal(chosenId);
+    });
+  }
 
   // Event Listeners for Closing Modal
   modalClose.forEach(function (el) {
