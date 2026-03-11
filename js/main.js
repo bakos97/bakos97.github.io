@@ -424,21 +424,7 @@
   var mTech = document.getElementById('modal-tech');
   var mLinks = document.getElementById('modal-links');
 
-  function emitAgentLog(payload) {
-    if (!window.__portfolioDebugLogs) window.__portfolioDebugLogs = [];
-    window.__portfolioDebugLogs.push(payload);
-  }
-
   function openModal(id) {
-    // #region agent log
-    emitAgentLog({
-      hypothesisId: 'B',
-      location: 'js/main.js:openModal:entry',
-      message: 'openModal called',
-      data: { requestedId: id, hasProjectData: !!projectData[id] },
-      timestamp: Date.now()
-    });
-    // #endregion
     var data = projectData[id];
     if (!data) return;
 
@@ -492,15 +478,6 @@
     // Show Modal
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    // #region agent log
-    emitAgentLog({
-      hypothesisId: 'B',
-      location: 'js/main.js:openModal:exit',
-      message: 'modal rendered',
-      data: { renderedId: id, renderedTitle: mTitle.textContent },
-      timestamp: Date.now()
-    });
-    // #endregion
   }
 
   function closeModal() {
@@ -534,35 +511,6 @@
       var pointCard = resolveCardFromPoint(event.clientX, event.clientY, targetCard);
       var chosenCard = pointCard || targetCard;
       var chosenId = chosenCard ? chosenCard.getAttribute('data-id') : null;
-
-      // #region agent log
-      emitAgentLog({
-        hypothesisId: 'A',
-        location: 'js/main.js:cardClick:entry',
-        message: 'project card click captured',
-        data: {
-          targetCardId: targetCard ? targetCard.getAttribute('data-id') : null,
-          pointCardId: pointCard ? pointCard.getAttribute('data-id') : null,
-          chosenId: chosenId,
-          targetTag: event.target && event.target.tagName ? event.target.tagName : null,
-          targetClass: event.target && event.target.className ? String(event.target.className) : null
-        },
-        timestamp: Date.now()
-      });
-      // #endregion
-
-      // #region agent log
-      emitAgentLog({
-        hypothesisId: 'D',
-        location: 'js/main.js:cardClick:branch',
-        message: 'card resolution branch',
-        data: {
-          usedPointResolution: !!pointCard && pointCard !== targetCard,
-          hasChosenId: !!chosenId
-        },
-        timestamp: Date.now()
-      });
-      // #endregion
 
       if (!chosenId) return;
       openModal(chosenId);
